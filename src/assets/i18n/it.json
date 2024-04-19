@@ -1,0 +1,87 @@
+{
+  "HELLO": "<strong>¡Hola Mundo!</strong><br>aver",
+  "SelectCountry": "Seleccione una opción",
+  "NavBar": 
+  {
+    "Home": "Casa",
+    "About": "Chi Siamo?",
+    "Why": "Cosa stiamo cercando?",
+    "Services": "Cosa facciamo?",
+    "Contact": "Contattaci"
+  },  
+  "Home": 
+  {
+    "title": "Trasformiamo i tuoi prodotti digitali e la tua organizzazione concentrandoci sul triplice impatto (sociale, economico e ambientale). ",
+    "subtitle": "Il nostro impegno è di essere all'avanguardia nella lotta al cambiamento climatico per raggiungere gli obiettivi di sviluppo sostenibile entro il 2050.",
+    "contact": "Contattaci"
+  }
+,
+  "About": 
+    {
+      "title": "Chi Siamo?",
+      "desc": "Siamo un gruppo di professionisti che cercano di cambiare il mindset della produzione e del consumo digitale attraverso un minor impatto ambientale. <br> <br> Condividiamo valori come:<ul class='list-inside'><li>Responsabilità </li><li>Impegno Sociale</li><li>Adattamento ai Cambiamenti</li><li>Empatia</li><li>Qualità di Servizio</li></ul><br>Il nostro focus è trasversale all'America Latina e ai Caraibi.<br>Il DNA di UnBambú ci spinge a fornire un servizio alla comunità portando avanti diverse soluzioni che generano non solo benefici economici, ma anche valore sociale e ambientale per il pianeta.<br><br><strong>Siamo Flessibilità, Forza ed Evoluzione.</strong>"
+    }
+  ,
+  "Why": 
+  {
+    "title": "Cosa stiamo cercando?",
+    "desc": "La natura è la nostra ispirazione. Il bambù è una pianta sostenibile che si adatta a varie condizioni, aiuta a prevenire l'erosione del suolo; è resistente e si rigenera. Ha la capacità di assorbire CO2 mitigando gli effetti del riscaldamento globale.<br>Si stima che ci siano circa 32 milioni di ettari di bambù piantati nel mondo e 400 milioni di ettari colpiti da incendi boschivi nel 2023.<br><span class='font-bold text-lg'>Essere come UnBambú significa investire nella resilienza e diventare agenti di cambiamento.</span>"
+  }
+  ,
+  "ServicesTitle": "Soluzioni ideali per la tua organizzazione",
+  "Services": [
+    {
+      "logo": "adjust-circle",
+      "title": "Servizi Completi",            
+       "desc": "1- Green Code, Green Ux, Infrastruttura.<br> 2- Ci adattiamo all'organizzazione e al cliente in base al budget e alle loro esigenze. <br>3- Servizio di consulenza, diagnosi e valutazione dei diversi prodotti digitali del cliente e del loro impatto sul l'ambiente."
+    
+    },
+    {
+      "logo": "circuit",
+      "title": "Formazione e Mentoring",
+      "desc": "Green IT e il suo ecosistema nella finanza sostenibile:<br> 1- Efficienza energetica<br> 2- Gestione dei rifiuti elettronici<br> 3- Progettazione di data center sostenibili."
+       
+    },
+    {
+      "logo": "flip-h",
+      "title": "Responsabilità sociale e imprenditoriale",
+      "desc": "Workshops, Master class e workshop nelle organizzazioni no profit (ONG, college e università) sulla problematica di Green IT e la sua applicazione quotidiana."
+    },
+    {
+      "logo": "fire",
+      "title": "Prodotto per misurare lo stato e diagnosticare",
+      "desc": "Soluzione digitale parametrizzabile nella tua organizzazione secondo gli Obiettivi di Sviluppo Sostenibile (SDG) proposti dall'ONU per il 2050."
+    },
+    {
+      "logo": "flower",
+      "title": "Prodotto leggero e agile",
+      "desc": "Calcolatore di C02 di diagnosi, misurazione e reporting dell'impronta di carbonio per i diversi prodotti digitali e web."
+    },
+    {
+      "logo": "shopping-basket",
+      "title": "Audit e controllo",
+      "desc": "1- Valutare l'efficienza e l'efficacia dei processi IT.<br> 2- Identificare rischi e vulnerabilità nella sicurezza delle informazioni. <br> 3- Garantire il rispetto delle norme e dei regolamenti applicabili.<br> 4- Quadro normativo per la finanza sostenibile a livello nazionale e internazionale.<br> 5- Ridurre il rischio di 'greenwashing'."
+    }
+ 
+  ],
+  "Contact": 
+  {
+    "title": "Contattaci",
+    "desc": "Vogliamo sapere di voi!<br>Entra a far parte della rivoluzione digitale e ambientale.",
+    "Placeholder":
+    {
+      "Name": "Nome",
+      "Email": "Email",
+      "Subject": "Oggetto",
+      "LinkedIn": "LinkedIn",
+      "Phone": "Telefono",
+      "Message": "Messaggio"
+
+    }
+  },  
+  "Footer": 
+  {
+    "rights": "© Unbambú - Tutti i diritti riservati."
+    
+  }
+}

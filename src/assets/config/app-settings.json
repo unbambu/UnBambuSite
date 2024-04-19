@@ -1,0 +1,8 @@
+{
+    "apiBaseUrl": "https://myapi.com",
+    "Parametros": {
+        
+        "Parametro": "test",
+        "SeleccionParametro" : "seleccione"
+      }
+}

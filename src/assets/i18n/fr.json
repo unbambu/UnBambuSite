@@ -1,0 +1,87 @@
+{
+  "HELLO": "<strong>¡Hola Mundo!</strong><br>aver",
+  "SelectCountry": "Sélectionnez une option",
+  "NavBar": 
+  {
+    "Home": "Home",
+    "About": "Qui sommes-nous?",
+    "Why": "Que cherchons-nous?",
+    "Services": "Qu'est-ce qu'on fait?",
+    "Contact": "Contactez-nous"
+  },  
+  "Home": 
+  {
+    "title": "Transformer vos produits numériques et votre organisation en se concentrant sur le triple impact (social, économique et environnemental). ",
+    "subtitle": "Notre engagement est d’être à l’avant-garde de la lutte contre le changement climatique afin d’atteindre les objectifs de développement durable d’ici 2050.",
+    "contact": "Contactez-nous"
+  }
+,
+  "About": 
+    {
+      "title": "Qui sommes-nous?",
+      "desc": "Nous sommes un groupe de professionnels qui cherchent à changer la mentalité de la production et de la consommation numérique grâce à un moindre impact environnemental. <br> <br> Nous partageons des valeurs telles que:  <ul class='list-inside'><li>Responsabilité </li><li>Engagement Social</li><li>S'adapter au changement</li><li>Empatía</li><li>Qualité de service</li></ul><br>Notre objectif est transversal à l’Amérique latine et les Caraïbes.<br>L’ADN d’UnBambú nous pousse à rendre service à la communauté en proposant différentes solutions qui génèrent non seulement des avantages économiques, mais aussi une valeur sociale et environnementale pour la planète.<br><br><strong>Nous sommes Flexibilité, Force et Évolution.</strong>"
+    }
+  ,
+  "Why": 
+  {
+    "title": "Que cherchons-nous?",
+    "desc": "La nature est notre inspiration. Le bambou est une plante durable qui s’adapte à diverses conditions, aide à prévenir l’érosion du sol; il est résistant et se régénère. Il a la capacité d’absorber le CO2 en atténuant les effets du chauffage global.<br>On estime qu’il y a environ 32 millions d’hectares de bambou plantés dans le monde et 400 millions d’hectares touchés par des incendies de forêt en 2023.<br><span class='font-bold text-lg'>Être comme UnBambu, c’est investir dans la résilience et devenir des agents du changement.</span>"
+  }
+  ,
+  "ServicesTitle": "Des solutions idéales pour votre organisation",
+  "Services": [
+    {
+      "logo": "adjust-circle",
+      "title": "Services Complets",            
+       "desc": "1- Green Code, Green Ux, infrastructure.<br> 2- Nous nous adaptons à l’organisation et au client en fonction du budget et de vos besoins. <br> 3- Service de conseil, diagnostic et évaluation des différents produits numériques du client et de leur impact sur l’environnement."
+    
+    },
+    {
+      "logo": "circuit",
+      "title": "Formation et mentorat",
+      "desc": "Green IT et son écosystème dans la finance durabl:<br> 1- Efficacité énergétique<br> 2- Gestion des déchets électroniques<br> 3- Conception de centres de données durables."
+       
+    },
+    {
+      "logo": "flip-h",
+      "title": "Responsabilité sociale et d’entreprise",
+      "desc": "Workshops, des conférences et des ateliers dans des organisations à but non lucratif (ONG, collèges et universités) sur la problématique de Green IT et son application au quotidien."
+    },
+    {
+      "logo": "fire",
+      "title": "Produit pour mesurer le statut et diagnostiquer",
+      "desc": "Solution numérique paramétrable dans votre organisation selon les Objectifs de développement durable (ODD) proposés par l’ONU à l’horizon 2050."
+    },
+    {
+      "logo": "flower",
+      "title": "Produit léger et agile",
+      "desc": "Calculateur de diagnostic C02, mesure et reporting de l’empreinte carbone pour différents produits numériques et sites web."
+    },
+    {
+      "logo": "shopping-basket",
+      "title": "Audit et contrôle",
+      "desc": "1- Évaluer l’efficacité et l’efficience des processus informatiques.<br> 2- Identifier les risques et les vulnérabilités en matière de sécurité de l’information. <br> 3- Assurer le respect des normes et réglementations applicables.<br> 4- Cadre réglementaire pour une finance durable aux niveaux national et international. <br> 5- Réduire le risque de 'greenwashing’."
+    }
+ 
+  ],
+  "Contact": 
+  {
+    "title": "Contactez-nous",
+    "desc": "On veut vous entendre !<br>Participez à la révolution numérique et environnementale.",
+    "Placeholder":
+    {
+      "Name": "Nom",
+      "Email": "Email",
+      "Subject": "Thème",
+      "LinkedIn": "LinkedIn",
+      "Phone": "Téléphone",
+      "Message": "Message"
+
+    }
+  },  
+  "Footer": 
+  {
+    "rights": "© Unbambú - Tous droits réservés."
+    
+  }
+}

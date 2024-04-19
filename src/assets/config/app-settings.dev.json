@@ -1,0 +1,8 @@
+{
+    "apiBaseUrl": "https://localhost:5001",
+    "Parametros": {
+        
+        "Parametro": "test",
+        "SeleccionParametro" : "seleccione"
+      }
+}

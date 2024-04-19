@@ -1,0 +1,87 @@
+{
+  "HELLO": "<strong>¡Hola Mundo!</strong><br>aver",
+  "SelectCountry": "Selecione uma opção",
+  "NavBar": 
+  {
+    "Home": "Home",
+    "About": "Quem somos?",
+    "Why": "O Que Procuramos?",
+    "Services": "O Que Fazemos?",
+    "Contact": "Contacte-nos"
+  },  
+  "Home": 
+  {
+    "title": "Transformamos seus produtos digitais e sua organização focalizando no triplo impacto (social, econômico e ambiental). ",
+    "subtitle": "O nosso compromisso é estar na vanguarda da luta contra as alterações climáticas, a fim de alcançar os objectivos de desenvolvimento sustentável até 2050.",
+    "contact": "Contacte-nos"
+  }
+,
+  "About": 
+    {
+      "title": "QUEM SOMOS?",
+      "desc": "Somos um grupo de profissionais que procuram mudar o mindset de produção e consumo digital através de um menor impacto ambiental. <br> <br>  Compartilhamos valores como:<ul class='list-inside'><li>Responsabilidade</li><li>Compromisso Social</li><li>Adaptação às Alterações</li><li>Empatia</li><li>Qualidade de Serviço</li></ul><br>Nosso foco é transversal à América Latina e Caribe.<br>O DNA da UnBambú nos impulsiona a facilitar um serviço à comunidade levando adiante diferentes soluções que gerem, não só benefícios econômicos, mas também valor social e ambiental para o planeta.<br><br><strong>Somos Flexibilidade, Força e Evolução.</strong>"
+    }
+  ,
+  "Why": 
+  {
+    "title": "O Que Procuramos?",
+    "desc": "A natureza é a nossa inspiração. O bambu é uma planta sustentável que se adapta a diversas condições, ajuda a prevenir a erosão do solo; é resistente e regenera-se. Tem a capacidade de absorver CO2 atenuando os efeitos do aquecimento global.<br>Estima-se que haja cerca de 32 milhões de hectares de bambu plantados no mundo e 400 milhões de hectares atingidos por incêndios florestais em 2023.<br><span class='font-bold text-lg'>Ser como UnBambú significa investir em resiliência e nos tornarmos agentes de mudança.</span>"
+  }
+  ,
+  "ServicesTitle": "Soluções ideais para sua organização",
+  "Services": [
+    {
+      "logo": "adjust-circle",
+      "title": "Servicios integrales",            
+       "desc": "1- Green Code, Green Ux, Infraestrutura.<br> 2- Nós nos adaptamos à organização e cliente de acordo com o orçamento e suas necessidades. <br> 3- Serviço de assessoria, diagnóstico e avaliação dos diferentes produtos digitais do cliente e seu impacto no ambiente."
+    
+    },
+    {
+      "logo": "circuit",
+      "title": "Treinamento e orientação",
+      "desc": "Green IT e a sua Ecosistema e as finanças sustentáveis:<br> 1- Eficiência energética<br> 2- Gestão de resíduos electrónicos<br> 3- Desenho de centros de dados sustentáveis."
+       
+    },
+    {
+      "logo": "flip-h",
+      "title": "Responsabilidade social e empresarial",
+      "desc": "Workshops, palestras e oficinas em organizações sem fins lucrativos (ONGs, colégios e universidades) sobre a problemática de Green IT e sua aplicação no dia a dia."
+    },
+    {
+      "logo": "fire",
+      "title": "Produto para medir o status e diagnosticar",
+      "desc": "Solução digital parametrizável em sua organização de acordo com os Objetivos de Desenvolvimento Sustentável (ODS) propostos pela ONU para 2050."
+    },
+    {
+      "logo": "flower",
+      "title": "Produto leve e ágil",
+      "desc": "Calculador de C02 de diagnóstico, medição e relatório da pegada de carbono para diferentes produtos digitais e sites."
+    },
+    {
+      "logo": "shopping-basket",
+      "title": "Auditoria e controlo",
+      "desc": "1- Avaliar a eficiência e eficácia dos processos de TI.<br> 2- Identificar riscos e vulnerabilidades na segurança da informação. <br>3- Assegurar o cumprimento das normas e regulamentações aplicáveis.<br> 4- Quadro regulamentar para finanças sustentáveis a nível nacional e internacional.<br> 5- Reduzir o risco de 'greenwashing'."
+    }
+ 
+  ],
+  "Contact": 
+  {
+    "title": "Contacte-nos",
+    "desc": "Queremos saber de vocês!<br>Junte-se à revolução digital e ambiental.",
+    "Placeholder":
+    {
+      "Name": "Nome",
+      "Email": "Email",
+      "Subject": "Assunto",
+      "LinkedIn": "LinkedIn",
+      "Phone": "Telefone",
+      "Message": "Mensagem"
+
+    }
+  }  ,
+  "Footer": 
+  {
+    "rights": "© Unbambú - Todos os direitos reservados."
+    
+  }
+}

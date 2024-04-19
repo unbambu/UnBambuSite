@@ -1,0 +1,27 @@
+<section class="py-36 lg:py-64 w-full table relative  bg-center bg-cover"
+    id="home">
+    <div class="absolute inset-0 bg-teal-900 dark:bg-slate-700 " ></div>
+    <div class="container relative ">
+        <div class="grid grid-cols-1 mt-12">
+            <h4
+                class="text-white lg:text-7xl text-4xl lg:leading-normal leading-normal font-medium mb-7 font-HWYGNRRW position-relative animate__animated animate__zoomIn"
+                               
+                [innerHTML]="'Home.title' | translate">
+
+            </h4>
+
+            <p class="text-white opacity-50 mb-0 max-w-2xl 
+            text-lg font-opensans-regular animate__animated animate__bounceInUp"            
+            [innerHTML]="'Home.subtitle' | translate">
+            >
+                 </p>
+
+            <div class="relative mt-10">
+                <a href="javascript:void(0);" (click)="ScrollIntoView('#contact')"
+                    class="btn bg-orange-100 hover:bg-orange-200 border-orange-100 hover:border-orange-200 hover:text-white text-teal-900 rounded-md"
+                    [innerHTML]="'Home.contact' | translate">
+                </a>
+            </div>
+        </div>
+    </div> 
+</section>

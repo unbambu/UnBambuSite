@@ -1,0 +1,142 @@
+//
+// _fonts.scss
+//
+
+/*@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');*/
+
+@font-face {
+    font-family: 'MesloLGS-Regular';    
+    src: url('/assets/fonts/MesloLGS-Regular.ttf') format('truetype');         
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'MesloLGS-Bold';    
+    src: url('/assets/fonts/MesloLGS-Bold.ttf') format('truetype');         
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'MesloLGM-Regular';    
+    src: url('/assets/fonts/MesloLGM-Regular.ttf') format('truetype');         
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'MesloLGM-Bold';    
+    src: url('/assets/fonts/MesloLGM-Bold.ttf') format('truetype');         
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'MesloLGM-Bold';    
+    src: url('/assets/fonts/MesloLGM-Bold.ttf') format('truetype');         
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face  
+{  
+    
+  font-family: 'iosevka-light'; 
+  
+    src: 
+         url('/assets/fonts/iosevka-light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal; 
+ }
+
+@font-face  
+{  
+    
+  font-family: 'iosevka-bold'; 
+  
+    src: url('/assets/fonts/iosevka-bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal; 
+ }
+
+ @font-face  
+ {  
+     
+   font-family: 'traffic1'; 
+   
+     src: 
+          url('/assets/fonts/TRAFFIC1_0.ttf') format('truetype');
+     font-weight: normal;
+     font-style: normal; 
+  }
+
+  @font-face  
+  {  
+      
+    font-family: 'traffic2'; 
+    
+      src: 
+           url('/assets/fonts/TRAFFIC2_0.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal; 
+   }
+  
+   @font-face  
+   {  
+       
+    
+       font-family: 'Open Sans Light';
+       src: url('/assets/fonts/OpenSans-Light-webfont.eot');
+       src: url('/assets/fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+            url('/assets/fonts/OpenSans-Light-webfont.woff') format('woff'),
+            url('/assets/fonts/OpenSans-Light-webfont.ttf') format('truetype'),
+            url('/assets/fonts/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+       font-weight: normal;
+       font-style: normal; 
+    }
+
+    @font-face  
+    {  
+        
+     
+        font-family: 'Open Sans Regular';
+        src: url('/assets/fonts/OpenSans-Regular.ttf');
+        font-weight: normal;
+        font-style: normal; 
+     }
+
+    @font-face  
+    {  
+        
+     
+        font-family: 'BebasKai';
+        src: url('/assets/fonts/BebasKai.ttf'),
+        ('/assets/fonts/BebasKai.otf');
+        font-weight: normal;
+        font-style: normal; 
+     }
+
+     @font-face  
+     {  
+         
+      
+         font-family: 'HWYGOTH';
+         src: url('/assets/fonts/HWYGOTH.TTF');
+         font-weight: normal;
+         font-style: normal; 
+      }
+      @font-face  
+      {  
+          
+       
+          font-family: 'HWYGNRRW';
+          src: url('/assets/fonts/HWYGNRRW.TTF');
+          font-weight: normal;
+          font-style: normal; 
+       }

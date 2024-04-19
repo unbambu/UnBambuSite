@@ -4,15 +4,15 @@
         <a class="navbar-brand" routerLink="/Home">
             <span class="inline-block dark:hidden">
                 <a href="/Home">
-                    <img src="assets/images/unbambu-light-final.svg" class="l-dark h-12 2xl:h-16 lg:h-16 md:h-16" alt="">
+                    <img src="assets/images/unbambu-light-final.svg" class="l-dark h-10 2xl:h-16 lg:h-16 md:h-16" alt="">
                 </a>
                 <a href="/Home">
-                    <img src="assets/images/unbambu-teal-final.svg" class="l-light h-12 2xl:h-16 lg:h-16 md:h-16" alt="">
+                    <img src="assets/images/unbambu-teal-final.svg" class="l-light h-10 2xl:h-16 lg:h-16 md:h-16" alt="">
                 </a>
                
             </span>
             <a href='/Home' >
-                <img src="assets/images/unbambu-teal-final.svg" class="hidden dark:inline-block h-12 2xl:h-16 lg:h-16 md:h-16" alt="">
+                <img src="assets/images/unbambu-teal-final.svg" class="hidden dark:inline-block h-10 2xl:h-16 lg:h-16 md:h-16" alt="">
             </a>
         </a>
 
@@ -21,10 +21,11 @@
             <div class="list-none menu-social mb-0">
                
 
-                <mat-form-field class="my-0">
+                <mat-form-field class="my-0 w-28 lg:w-32">
             
-                    <mat-select [(ngModel)]="selectedValue">
-                    <mat-option *ngFor="let lang of langs" [value]="lang.name" (click)="switchLang(lang.code)">
+                    <mat-select [(ngModel)]="selectedValue" class="text-[12px] lg:text-sm">
+                    <mat-option *ngFor="let lang of langs" [value]="lang.name" (click)="switchLang(lang.code)"
+                    class="text-[11px] lg:text-sm" >
                         {{lang.name}}
                     </mat-option>
                     </mat-select>

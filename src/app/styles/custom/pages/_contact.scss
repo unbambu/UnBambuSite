@@ -4,13 +4,13 @@
 .form-input {
     @apply w-full py-2 px-3 border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded h-10 outline-none bg-transparent;
     &:focus {
-        @apply border-orange-600/50 shadow-none ring-0;
+        @apply border-teal-600 shadow-none ring-0;
     }
 }
 
 /* Validation */
 .error {
-    @apply my-2 mx-0 hidden text-orange-600;
+    @apply my-2 mx-0 hidden text-orange-200;
 }
   
 #ajaxsuccess {
@@ -23,7 +23,7 @@
 }
 
 .error_message {
-    @apply bg-orange-600/5 text-orange-600;
+    @apply bg-orange-600/5 text-orange-200;
 }
 
 .contact-loader {

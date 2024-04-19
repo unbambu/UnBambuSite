@@ -16,7 +16,7 @@ export class NavbarComponent implements OnInit {
   public activeLang = '';
 
   constructor(public router: Router, public translate: TranslateApp) {
-    if (router.url !== '/index-four' && router.url !== '/index-five' && router.url !== '/index-seven')
+   // if (router.url !== '/index-four' && router.url !== '/index-five' && router.url !== '/index-seven')
       this.currentRoute = true;
   }
   windowScroll() {
@@ -37,6 +37,9 @@ export class NavbarComponent implements OnInit {
     this.active = elem;
     let ele = document.querySelector(elem) as any;
     ele.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    
+    
+    this.toggleMenu()
   }
 
   ngOnInit() {
@@ -45,6 +48,9 @@ export class NavbarComponent implements OnInit {
     this.activeLang = 'en';
     this.selectedValue = 'English';
     this.getLangs();
+  
+
+   
   }
 
   toggleMenu() {

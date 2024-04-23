@@ -1,6 +1,5 @@
 {
-  "HELLO": "<strong>¡Hola Mundo!</strong><br>aver",
-  "SelectCountry": "Select an option",
+ 
   "NavBar": 
   {
     "Home": "Home",
@@ -28,42 +27,48 @@
     "desc": "Nature is our inspiration. Bamboo is a sustainable plant that adapts to various conditions, helps prevent soil erosion; is resistant and regenerates. Has the ability to absorb CO2 mitigating the effects of global warming.<br>It is estimated that there are about 32 million hectares of bamboo planted in the world and 400 million hectares affected by forest fires in 2023.<br><span class='font-bold text-lg'>Being like UnBambú means investing in resilience and becoming agents of change.</span>"
   }
   ,
-  "ServicesTitle": "Ideal solutions for your organization  ",
-  "Services": [
-    {
-      "logo": "adjust-circle",
-      "title": "Integral services",            
-       "desc": "1- Green Code, Green Ux, infrastructure.<br> 2- We adapt to the organization and customer according to the budget and your needs. <br> 3- Advisory service, diagnosis and evaluation of the customer’s different digital products and their impact on the environment."
+  "Services":
+  {
+    "title": "WHAT WE DO?",
+    "subtitle": "Ideal solutions for your organization",
     
-    },
-    {
-      "logo": "circuit",
-      "title": "Training and mentoring",
-      "desc": "Green IT and its ecosystem in sustainable finance:<br> 1- Energy efficiency.<br> 2- Electronic waste management.<br> 3- Design of sustainable data centers."
-       
-    },
-    {
-      "logo": "flip-h",
-      "title": "Social and corporate responsibility",
-      "desc": "Workshops, master classes in non-profit organizations (NGOs, colleges and universities) about the problems of Green IT and its application in everyday life."
-    },
-    {
-      "logo": "fire",
-      "title": "Product to measure status and diagnose",
-      "desc": "Configurable digital solution in your organization according to the Sustainable Development Goals (ODS) proposed by the UN for 2050."
-    },
-    {
-      "logo": "flower",
-      "title": "Lightweight and agile product",
-      "desc": "C02 calculator for diagnostics, measurement and reporting of the carbon footprint for different digital products and websites."
-    },
-    {
-      "logo": "shopping-basket",
-      "title": "Audit and control",
-      "desc": "1- Evaluate the efficiency and effectiveness of IT processes.<br> 2- Identify risks and vulnerabilities in information security. <br> 3- Ensure compliance with applicable rules and regulations.<br> 4- Regulatory framework for sustainable finance at national and international levels.<br> 5- Reduce the risk of greenwashing."
-    }
- 
-  ],
+    "services": [
+      {
+        "logo": "adjust-circle",
+        "title": "Integral services",            
+         "desc": "1- Green Code, Green Ux, infrastructure.<br> 2- We adapt to the organization and customer according to the budget and your needs. <br> 3- Advisory service, diagnosis and evaluation of the customer’s different digital products and their impact on the environment."
+      
+      },
+      {
+        "logo": "circuit",
+        "title": "Training and mentoring",
+        "desc": "Green IT and its ecosystem in sustainable finance:<br> 1- Energy efficiency.<br> 2- Electronic waste management.<br> 3- Design of sustainable data centers."
+         
+      },
+      {
+        "logo": "flip-h",
+        "title": "Social and corporate responsibility",
+        "desc": "Workshops, master classes in non-profit organizations (NGOs, colleges and universities) about the problems of Green IT and its application in everyday life."
+      },
+      {
+        "logo": "fire",
+        "title": "Product to measure status and diagnose",
+        "desc": "Configurable digital solution in your organization according to the Sustainable Development Goals (ODS) proposed by the UN for 2050."
+      },
+      {
+        "logo": "flower",
+        "title": "Lightweight and agile product",
+        "desc": "C02 calculator for diagnostics, measurement and reporting of the carbon footprint for different digital products and websites."
+      },
+      {
+        "logo": "shopping-basket",
+        "title": "Audit and control",
+        "desc": "1- Evaluate the efficiency and effectiveness of IT processes.<br> 2- Identify risks and vulnerabilities in information security. <br> 3- Ensure compliance with applicable rules and regulations.<br> 4- Regulatory framework for sustainable finance at national and international levels.<br> 5- Reduce the risk of greenwashing."
+      }
+   
+    ]
+  }
+ ,
   "Contact": 
   {
     "title": "CONTACT US",

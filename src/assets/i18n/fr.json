@@ -1,13 +1,11 @@
-{
-  "HELLO": "<strong>¡Hola Mundo!</strong><br>aver",
-  "SelectCountry": "Sélectionnez une option",
+{ 
   "NavBar": 
   {
     "Home": "Home",
-    "About": "Qui sommes-nous?",
-    "Why": "Que cherchons-nous?",
+    "About": "Qui sommes nous?", 
+    "Why": "Que cherchons nous?",
     "Services": "Qu'est-ce qu'on fait?",
-    "Contact": "Contactez-nous"
+    "Contact": "Contactez nous"
   },  
   "Home": 
   {
@@ -18,18 +16,21 @@
 ,
   "About": 
     {
-      "title": "Qui sommes-nous?",
+      "title": "QUI SOMMES NOUS?", 
       "desc": "Nous sommes un groupe de professionnels qui cherchent à changer la mentalité de la production et de la consommation numérique grâce à un moindre impact environnemental. <br> <br> Nous partageons des valeurs telles que:  <ul class='list-inside'><li>Responsabilité </li><li>Engagement Social</li><li>S'adapter au changement</li><li>Empatía</li><li>Qualité de service</li></ul><br>Notre objectif est transversal à l’Amérique latine et les Caraïbes.<br>L’ADN d’UnBambú nous pousse à rendre service à la communauté en proposant différentes solutions qui génèrent non seulement des avantages économiques, mais aussi une valeur sociale et environnementale pour la planète.<br><br><strong>Nous sommes Flexibilité, Force et Évolution.</strong>"
     }
   ,
   "Why": 
   {
-    "title": "Que cherchons-nous?",
+    "title": "QUE CHERCHONS NOUS?",
     "desc": "La nature est notre inspiration. Le bambou est une plante durable qui s’adapte à diverses conditions, aide à prévenir l’érosion du sol; il est résistant et se régénère. Il a la capacité d’absorber le CO2 en atténuant les effets du chauffage global.<br>On estime qu’il y a environ 32 millions d’hectares de bambou plantés dans le monde et 400 millions d’hectares touchés par des incendies de forêt en 2023.<br><span class='font-bold text-lg'>Être comme UnBambu, c’est investir dans la résilience et devenir des agents du changement.</span>"
   }
   ,
-  "ServicesTitle": "Des solutions idéales pour votre organisation",
-  "Services": [
+  "Services":
+  {
+    "title": "QUE FAISONS NOUS?",
+    "subtitle": "Des solutions idéales pour votre organisation",
+    "services": [
     {
       "logo": "adjust-circle",
       "title": "Services Complets",            
@@ -63,10 +64,11 @@
       "desc": "1- Évaluer l’efficacité et l’efficience des processus informatiques.<br> 2- Identifier les risques et les vulnérabilités en matière de sécurité de l’information. <br> 3- Assurer le respect des normes et réglementations applicables.<br> 4- Cadre réglementaire pour une finance durable aux niveaux national et international. <br> 5- Réduire le risque de 'greenwashing’."
     }
  
-  ],
+    ]
+  },
   "Contact": 
   {
-    "title": "Contactez-nous",
+    "title": "CONTACTEZ NOUS",
     "desc": "On veut vous entendre !<br>Participez à la révolution numérique et environnementale.",
     "Placeholder":
     {

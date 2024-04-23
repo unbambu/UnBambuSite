@@ -1,6 +1,4 @@
 {
-  "HELLO": "<strong>¡Hola Mundo!</strong><br>aver",
-  "SelectCountry": "Selecione uma opção",
   "NavBar": 
   {
     "Home": "Home",
@@ -24,12 +22,15 @@
   ,
   "Why": 
   {
-    "title": "O Que Procuramos?",
+    "title": "O QUE PROCURAMOS?",
     "desc": "A natureza é a nossa inspiração. O bambu é uma planta sustentável que se adapta a diversas condições, ajuda a prevenir a erosão do solo; é resistente e regenera-se. Tem a capacidade de absorver CO2 atenuando os efeitos do aquecimento global.<br>Estima-se que haja cerca de 32 milhões de hectares de bambu plantados no mundo e 400 milhões de hectares atingidos por incêndios florestais em 2023.<br><span class='font-bold text-lg'>Ser como UnBambú significa investir em resiliência e nos tornarmos agentes de mudança.</span>"
   }
   ,
-  "ServicesTitle": "Soluções ideais para sua organização",
-  "Services": [
+  "Services":
+  {
+   "title": "QUE FAZEMOS?",
+   "subtitle": "Soluções ideais para sua organização",  
+   "services": [
     {
       "logo": "adjust-circle",
       "title": "Servicios integrales",            
@@ -63,10 +64,11 @@
       "desc": "1- Avaliar a eficiência e eficácia dos processos de TI.<br> 2- Identificar riscos e vulnerabilidades na segurança da informação. <br>3- Assegurar o cumprimento das normas e regulamentações aplicáveis.<br> 4- Quadro regulamentar para finanças sustentáveis a nível nacional e internacional.<br> 5- Reduzir o risco de 'greenwashing'."
     }
  
-  ],
+    ]
+  },
   "Contact": 
   {
-    "title": "Contacte-nos",
+    "title": "CONTACTE-NOS",
     "desc": "Queremos saber de vocês!<br>Junte-se à revolução digital e ambiental.",
     "Placeholder":
     {

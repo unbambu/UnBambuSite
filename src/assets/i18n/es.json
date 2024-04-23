@@ -1,6 +1,5 @@
 {
-  "HELLO": "<strong>¡Hola Mundo!</strong><br>aver",
-  "SelectCountry": "Seleccione una opción",
+  
   "NavBar": 
   {
     "Home": "Home",
@@ -28,8 +27,11 @@
     "desc": "La naturaleza es nuestra inspiración. El bambú es una planta sostenible que se adapta a diversas condiciones, ayuda a prevenir la erosión del suelo; es resistente y se regenera. Tiene la capacidad de absorber CO2 mitigando los efectos del calentantamiento global.<br>Se estima que hay alrededor de 32 millones de hectáreas de bambú plantadas en el mundo y 400 millones de hectáreas afectadas por incendios forestales en 2023.<br><span class='font-bold text-lg'>Ser como UnBambú implica invertir en resiliencia y convertirnos en agentes de cambio.</span>"
   }
   ,
-  "ServicesTitle": "Soluciones ideales para tu organización",
-  "Services": [
+  "Services":
+  {
+    "title": "¿QUÉ HACEMOS?",
+    "subtitle": "Soluciones ideales para tu organización",
+    "services": [
     {
       "logo": "adjust-circle",
       "title": "Servicios integrales",            
@@ -63,7 +65,8 @@
       "desc": "1- Evaluar la eficiencia y eficacia de los procesos de IT.<br> 2- Identificar riesgos y vulnerabilidades en la seguridad de la información. <br> 3- Asegurar el cumplimiento de las normas y regulaciones aplicables.<br> 4- Marco regulatorio para las finanzas sostenibles a nivel nacional e internacional.<br> 5- Reducir el riesgo de 'greenwashing'."
     }
  
-  ],
+  ]
+  },
   "Contact": 
   {
     "title": "CONTACTANOS",

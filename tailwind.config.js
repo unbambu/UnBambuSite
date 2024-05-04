@@ -47,6 +47,7 @@ module.exports = {
         'dark': '#3c4858',
         'green': '#40c679',
         'black': '#161c2d',
+        'bluegreen': '#66b1b1',        
         'dark-footer': '#192132',
         "dark-700": "#090e34b3",
         "brown": "#CFC4B0",
@@ -78,6 +79,9 @@ module.exports = {
         0.75: '10.1875rem',
         3.25: '0.8125rem'
       },
+      transitionDuration: {
+        '2000': '2000ms',
+      },
 
       maxWidth: ({
           theme,
@@ -96,10 +100,16 @@ module.exports = {
       },
     },
   },
+  variants: {
+    extend: {},
+    scrollbar: ['dark', 'rounded'],
+  },
   plugins: [
-    require("@tailwindcss/forms")({
-      strategy: 'class', // only generate classes
-    }),
-  ],
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
+    require('tailwind-scrollbar'),
+    'prettier-plugin-tailwindcss',
+  ]
  
  };

@@ -6,7 +6,9 @@ import { TranslateApp } from '../../services/translate.service';
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
+  
 })
+
 export class NavbarComponent implements OnInit {
   target: any;
   active: any = '#home';
@@ -14,6 +16,10 @@ export class NavbarComponent implements OnInit {
   selectedValue: string = '';
   public langs: Array<{ name: string; code: string }> = [];
   public activeLang = '';
+  public open: boolean = false;
+  isHamburguer = true;
+  isShow= true;
+ 
 
   constructor(public router: Router, public translate: TranslateApp) {
    // if (router.url !== '/index-four' && router.url !== '/index-five' && router.url !== '/index-seven')
@@ -37,11 +43,12 @@ export class NavbarComponent implements OnInit {
     this.active = elem;
     let ele = document.querySelector(elem) as any;
     ele.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    
-    
     this.toggleMenu()
+    
+    //this.isShow = !this.isShow;
   }
 
+ 
   ngOnInit() {
     window.addEventListener('scroll', this.windowScroll, true);       
     this.translate.SetLang("en","en");
@@ -55,7 +62,21 @@ export class NavbarComponent implements OnInit {
 
   toggleMenu() {
     let ele = document.getElementById('menu-collapse') as any;
-    ele.classList.toggle('hidden');
+    ele.classList.toggle('hidden');    
+    //this.isShow = !this.isShow;
+   
+
+    
+  }
+
+  openMenu() {
+   
+    this.isShow = !this.isShow;
+    
+  /*
+    let ele = document.getElementById('menu') as any;
+    ele.classList.toggle('show');*/
+   
   }
 
   switchLang(lang: string) {     
@@ -69,5 +90,6 @@ export class NavbarComponent implements OnInit {
   
     this.langs = this.translate.getLangs();
   }
+
 }
 

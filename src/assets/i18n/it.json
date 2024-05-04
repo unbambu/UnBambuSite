@@ -5,7 +5,8 @@
     "About": "Chi Siamo?",
     "Why": "Cosa stiamo cercando?",
     "Services": "Cosa facciamo?",
-    "Contact": "Contattaci"
+    "Contact": "Contattaci",
+    "Close": "Vicino"
   },  
   "Home": 
   {
@@ -17,7 +18,7 @@
   "About": 
     {
       "title": "CHI SIAMO?",
-      "desc": "Siamo un gruppo di professionisti che cercano di cambiare il mindset della produzione e del consumo digitale attraverso un minor impatto ambientale. <br> <br> Condividiamo valori come:<ul class='list-inside'><li>Responsabilità </li><li>Impegno Sociale</li><li>Adattamento ai Cambiamenti</li><li>Empatia</li><li>Qualità di Servizio</li></ul><br>Il nostro focus è trasversale all'America Latina e ai Caraibi.<br>Il DNA di UnBambú ci spinge a fornire un servizio alla comunità portando avanti diverse soluzioni che generano non solo benefici economici, ma anche valore sociale e ambientale per il pianeta.<br><br><strong>Siamo Flessibilità, Forza ed Evoluzione.</strong>"
+      "desc": "Siamo un gruppo di professionisti che cercano di cambiare il mindset della produzione e del consumo digitale attraverso un minor impatto ambientale. <br> <br> Condividiamo valori come:<ul class='list-inside'><li>responsabilità, </li><li>impegno sociale,</li><li>adattamento ai cambiamenti,</li><li>empatia,</li><li>qualità di servizio.</li></ul><br>Il nostro focus è trasversale all'America Latina e ai Caraibi.<br>Il DNA di UnBambú ci spinge a fornire un servizio alla comunità portando avanti diverse soluzioni che generano non solo benefici economici, ma anche valore sociale e ambientale per il pianeta.<br><br><strong>Siamo Flessibilità, Forza ed Evoluzione.<br>Sono UnBambú.</strong>"
     }
   ,
   "Why": 
@@ -81,6 +82,7 @@
 
     }
   },  
+  
   "Footer": 
   {
     "rights": "© Unbambú - Tutti i diritti riservati."

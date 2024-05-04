@@ -6,7 +6,8 @@
     "About": "Who are we?",
     "Why": "What are we looking for?",
     "Services": "What do we do?",
-    "Contact": "Contact us"
+    "Contact": "Contact us",
+    "Close": "Close"
   },  
   "Home": 
   {
@@ -18,7 +19,7 @@
   "About": 
     {
       "title": "WHO ARE WE?",
-      "desc": "We are a group of professionals who seek to change the mindset of production and digital consumption through a lower environmental impact. <br> <br>  We share values like:<ul class='list-inside'><li>Responsibility </li><li>Social commitment</li><li>Change adaptation</li><li>Empathy</li><li>Quality of service</li></ul><br>Our focus is transversal to Latin America and the Caribbean.<br>UnBambú’s DNA drives us to facilitate a service to the community by pursuing different solutions generating not only economic benefits, but also social and environmental value for the planet.<br><br><strong>We are Flexibility, Strength and Evolution.</strong>"
+      "desc": "We're a group of professionals who seek to change the mindset of production and digital consumption through a lower environmental impact. <br> <br>  We share values like:<ul class='list-inside'><li>responsibility, </li><li>social commitment,</li><li>change adaptation,</li><li>empathy,</li><li>service quality.</li></ul><br>Our focus is transversal to Latin America and the Caribbean.<br>UnBambú’s DNA drives us to facilitate a service to the community by pursuing different solutions generating not only economic benefits, but also social and environmental value for the planet.<br><br><strong>We're Flexibility, Strength and Evolution.<br>We're UnBambú.</strong>"
     }
   ,
   "Why": 
@@ -84,6 +85,7 @@
 
     }
   },
+ 
   "Footer": 
   {
     "rights": "© Unbambú - All rights reserved."

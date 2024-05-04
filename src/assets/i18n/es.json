@@ -6,19 +6,20 @@
     "About": "¿Quiénes Somos?",
     "Why": "¿Qué buscamos?",
     "Services": "¿Qué hacemos?",
-    "Contact": "Contactanos"
+    "Contact": "Contáctanos",
+    "Close": "Cerrar"
   },  
   "Home": 
   {
     "title": "Transformamos tus productos digitales y tu organización focalizando en el triple impacto (social, económico y ambiental). ",
     "subtitle": "Nuestro compromiso es estar a la vanguardia de la lucha contra el cambio climático con el fin de alcanzar los objetivos de desarrollo sostenible de cara al 2050.",
-    "contact": "Contactanos"
+    "contact": "Contáctanos"
   }
 ,
   "About": 
     {
       "title": "¿QUIÉNES SOMOS?",
-      "desc": "Somos un grupo de profesionales que buscamos cambiar el mindset de la producción y el consumo digital a través de un menor impacto ambiental. <br> <br>  Compartimos valores como:<ul class='list-inside'><li>Responsabilidad </li><li>Compromiso Social</li><li>Adaptación al cambio</li><li>Empatía</li><li>Calidad de Servicio</li></ul><br>Nuestro foco es transversal a América Latina y el Caribe.<br>El ADN de UnBambú nos impulsa a facilitar un servicio a la comunidad llevando adelante diferentes soluciones que generen, no solo beneficios económicos, sino también valor social y ambiental para el planeta.<br><br><strong>Somos Flexibilidad, Fortaleza y Evolución.</strong>"
+      "desc": "Somos un grupo de profesionales que buscamos cambiar el mindset de la producción y el consumo digital a través de un menor impacto ambiental. <br> <br>  Compartimos valores como:<ul class='list-inside'><li>responsabilidad, </li><li>compromiso social, </li><li>adaptación al cambio, </li><li>empatía, </li><li>calidad de servicio.</li></ul><br>Nuestro foco es transversal a América Latina y el Caribe.<br>El ADN de UnBambú nos impulsa a facilitar un servicio a la comunidad llevando adelante diferentes soluciones que generen, no solo beneficios económicos, sino también valor social y ambiental para el planeta.<br><br><strong>Somos Flexibilidad, Fortaleza y Evolución.<br>Somos UnBambú.</strong>"
     }
   ,
   "Why": 
@@ -69,8 +70,8 @@
   },
   "Contact": 
   {
-    "title": "CONTACTANOS",
-    "desc": "¡Queremos saber de vos!<br>Sumate a ser parte de la revolución digital y ambiental.",
+    "title": "CONTÁCTANOS",
+    "desc": "¡Queremos saber de ti!<br>Súmate a ser parte de la revolución digital y ambiental.",
     "Placeholder":
     {
       "Name": "Nombre",
@@ -82,6 +83,7 @@
 
     }
   },
+
   "Footer": 
   {
     "rights": "© Unbambú - Todos los derechos reservados."

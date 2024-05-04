@@ -1,0 +1,68 @@
+<!-- Navbar Start -->
+<nav class="navbar" id="navbar">
+    <div class="container flex flex-wrap items-center justify-start">
+        <a class="navbar-brand" routerLink="/Home">
+            <span class="inline-block dark:hidden">
+                <a href="/">
+                    <img src="assets/images/unbambu-light-final.svg" class="l-dark h-14 2xl:h-16 lg:h-12 md:h-11" alt="">
+                </a>
+                <a href="/">
+                    <img src="assets/images/unbambu-teal-final.svg" class="l-light h-14 2xl:h-16 lg:h-12 md:h-11" alt="">
+                </a>
+            </span>
+            <a href='/' >
+                <img src="assets/images/unbambu-teal-final.svg" class="hidden dark:inline-block h-12 2xl:h-12 lg:h-16 md:h-11" alt="">
+            </a>
+        </a>
+
+        <div class="nav-icons flex items-center lg_992:order-2 ms-auto">
+
+            <div class="list-none menu-social mb-0">
+               
+
+                <mat-form-field class="language my-0  ">
+            
+                    <mat-select [(ngModel)]="selectedValue" class="text-[8px] lg:text-[12px] md:text-xs">
+                    <mat-option *ngFor="let lang of langs" [value]="lang.name" (click)="switchLang(lang.code)"
+                    class="text-[8px] lg:text-[12px]" >
+                        {{lang.name}}
+                    </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+               
+            </div> 
+         
+
+         
+
+        </div   >
+
+         
+         <div class="navigation lg_992:order-1 lg_992:flex hidden " id="menu-collapse"   >
+        
+            <ul class="navbar-nav " [class.nav-light]="currentRoute" id="navbar-navlist">
+                <li class="nav-item" [ngClass]="{'active': active == '#home'}">
+                    <a class="nav-link" (click)="ScrollIntoView('#home')" href="javascript:void(0);"><span class="  dark:text-slate-100 "  [innerHTML]="'NavBar.Home' | translate"></span> </a>
+                </li>
+                <li class="nav-item" [ngClass]="{'active': active == '#about'}">
+                    <a class="nav-link" href="javascript:void(0);" (click)="ScrollIntoView('#about')"><span class="dark:text-slate-100" [innerHTML]="'NavBar.About' | translate"></span> </a>
+                </li>
+                <li class="nav-item" [ngClass]="{'active': active == '#why'}">
+                    <a class="nav-link" href="javascript:void(0);" (click)="ScrollIntoView('#why')"><span class="dark:text-slate-100" [innerHTML]="'NavBar.Why' | translate"></span></a>
+                </li>
+                <li class="nav-item" [ngClass]="{'active': active == '#services'}">
+                    <a class="nav-link" href="javascript:void(0);" (click)="ScrollIntoView('#services')"><span class="dark:text-slate-100" [innerHTML]="'NavBar.Services' | translate"></span></a>
+                </li>                          
+                <li class="nav-item" [ngClass]="{'active': active == '#contact'}" >
+                    <a class="nav-link" href="javascript:void(0);" (click)="ScrollIntoView('#contact')"><span class="dark:text-slate-100" [innerHTML]="'NavBar.Contact' | translate"></span></a>
+                </li>
+                <hr size="1px" color="black" class="lg_992:hidden"/>  
+                <li class="nav-item lg_992:hidden"  >
+                    <a class="nav-link" href="javascript:void(0);" (click)="toggleMenu()"><span class="dark:text-slate-100" [innerHTML]="'NavBar.Close' | translate"></span></a>
+                </li>                              
+            </ul>
+        
+        </div>
+    </div>
+</nav>

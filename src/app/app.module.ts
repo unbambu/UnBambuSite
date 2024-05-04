@@ -5,6 +5,7 @@ import { APP_INITIALIZER, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './shared/modules/material/material.module';
 
 import { provideRouter } from '@angular/router';
 import { provideAnimations, provideNoopAnimations } from '@angular/platform-browser/animations';
@@ -15,7 +16,7 @@ import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { ConfigService } from './shared/services/config.service';
 import {TranslateLoader, TranslateModule,TranslateService} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
-
+import { SvgIconComponent, provideAngularSvgIcon } from 'angular-svg-icon';
 
 export const routes: Routes = [];
 
@@ -38,6 +39,8 @@ export function createTranslateLoader(http: HttpClient) {
     AppRoutingModule,
     BrowserAnimationsModule,    
     HttpClientModule,
+    SvgIconComponent, 
+    MaterialModule,
     TranslateModule.forRoot({    
       loader: {       
           provide: TranslateLoader,
@@ -49,6 +52,7 @@ export function createTranslateLoader(http: HttpClient) {
   
     
   ],
+  providers: [provideAngularSvgIcon()],
 
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]

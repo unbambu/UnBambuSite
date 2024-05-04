@@ -1,0 +1,184 @@
+
+/*********************************/
+/*             Menu              */
+/*===============================*/
+.navbar {
+    @apply fixed top-0 start-0 end-0 z-999 bg-transparent py-3 transition-all duration-700 font-mesloLGS-Regular;
+    .navigation {
+        @apply w-full m-0;
+        .navbar-nav {
+            @apply mt-4 flex flex-row overflow-y-scroll h-24;
+            .nav-item {
+              @apply relative mx-0;
+            }
+            .nav-link {
+                @apply block p-3 text-slate-900 hover:text-orange-200 transition-all duration-500 dark:text-white/60 dark:hover:text-white;
+            }
+            .active {
+                .nav-link {
+                    @apply text-teal-800 dark:text-orange-100;
+                }
+            }
+        }
+    }
+    .navbar-brand {
+        @apply me-12 p-0;
+        .l-dark,
+        .logo-dark-mode {
+            @apply hidden;
+        }
+        .l-light,
+        .logo-light-mode {
+            @apply inline-block;
+        }
+        @media (max-width: 991.98px) {
+            .l-dark {
+               // @apply inline-block #{!important};
+               @apply hidden #{!important};
+            }
+            .l-light {
+              //  @apply hidden #{!important};
+              @apply inline-block #{!important};
+            }
+
+            
+        }
+    }
+    .menu-social {
+        .login-btn-primary {
+            @apply hidden;
+        }
+        .login-btn-light {
+            @apply inline-block;
+        }
+  
+        @media (max-width: 991.98px) {
+            .login-btn-primary {
+                @apply inline-block #{!important};
+            }
+            .login-btn-light {
+                @apply hidden #{!important};
+            }
+        }
+    }
+    &.is-sticky {
+        @apply bg-white dark:bg-slate-900 shadow dark:shadow-slate-800;
+        .navbar-brand {
+            .l-dark {
+                @apply inline-block;
+            }
+            .l-light {
+                @apply hidden;
+            }
+        }
+  
+        .menu-social {
+            .login-btn-primary {
+                @apply inline-block;
+            }
+            .login-btn-light {
+                @apply hidden;
+            }
+        }
+    }
+  }
+  
+  @media (min-width: 992px){
+    .navbar {
+        @apply py-3;
+        .navigation {
+            @apply flex w-auto;
+            .navbar-nav {
+                @apply h-auto mt-0 overflow-visible text-lg;
+                .nav-link {
+                    @apply border-0 hover:bg-transparent;
+                }
+  
+                &.nav-light {
+                    .nav-link {
+                        @apply block p-3 text-white/60 hover:text-orange-100 #{!important};
+                    }
+                    .active {
+                        .nav-link {
+                            @apply text-orange-100 #{!important};
+                        }
+                    }
+                }
+            }
+        }
+  
+        .nav-icons {
+            .collapse-btn {
+                @apply hidden;
+            }
+        }
+        &.is-sticky {
+            @apply py-3;
+            .navbar-nav {
+                .nav-link {
+                    @apply text-white;
+                }
+                .active {
+                    .nav-link {
+                        @apply text-white;
+                    }
+                }
+  
+                &.nav-light {
+                    .nav-link {
+                        @apply text-slate-900 hover:text-orange-200 transition-all duration-500 dark:text-white/60 dark:hover:text-white #{!important};
+                    }
+                    .active {
+                        .nav-link {
+                            @apply text-teal-800 dark:text-orange-100 #{!important};
+                        }
+                    }
+                }
+            }
+        }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .navbar {
+        @apply text-base;
+        .navigation {
+            @apply text-base;         
+            .navbar-nav {
+                @apply text-xs;
+                
+            
+              
+            }
+        }
+    }
+    .language {
+        @apply w-28;
+    }
+
+    }
+  
+  @media (max-width: 991px) {
+    .navbar {
+        @apply  bg-teal-900 shadow-2xl dark:shadow-slate-800 dark:bg-slate-900 #{!important};
+        .navigation {
+          /*  @apply   animate-pulse transition duration-75;*/
+
+          
+            .navbar-nav {
+                @apply  block h-auto  transition-all duration-2000 ease-out;
+                .nav-link {
+                    @apply text-white;
+                }
+                .active {
+                    .nav-link {
+                        @apply text-orange-100
+                    }
+                }
+                .menu-social {
+                    @apply mb-5 #{!important};
+                }
+            }
+        }
+    }
+  }

@@ -47,6 +47,7 @@ module.exports = {
         'dark': '#3c4858',
         'green': '#40c679',
         'black': '#161c2d',
+        'dark-navbar':'#1e293b',
         'bluegreen': '#66b1b1',        
         'dark-footer': '#192132',
         "dark-700": "#090e34b3",

@@ -1,0 +1,174 @@
+$mat-primary: (
+  100: #026e00,
+  500: #026e00,
+  700: #026e00,
+  contrast: (
+    100: #026e00,
+    500: #026e00,
+    700: #026e00,
+  ),
+);
+$mat-secondary: (
+  100: white,
+  500: #44b7f7,
+  700: #5d87ff,
+  contrast: (
+    100: white,
+    500: white,
+    700: white,
+  ),
+);
+
+$mat-warn: (
+  100: FDEDE8,
+  500: #fa896b,
+  700: #f3704d,
+  contrast: (
+    100: white,
+    500: white,
+    700: white,
+  ),
+);
+
+$mat-accent: (
+  100: FDEDE8,
+  500: #fa896b,
+  700: #f3704d,
+  contrast: (
+    100: white,
+    500: white,
+    700: white,
+  ),
+);
+
+$theme-primary: mat.define-palette($mat-primary, 500);
+$theme-accent: mat.define-palette($mat-secondary, 500);
+$theme-warn: mat.define-palette($mat-warn, 500);
+
+$greentheme: mat.define-light-theme(
+  (
+    color: (
+      primary: $theme-primary,
+      accent: $theme-accent,
+      warn: $theme-warn,
+    ),
+    typography:
+      mat.define-typography-config(
+        /*$font-family: "Plus Jakarta Sans",
+        $subtitle-2: mat.define-typography-level(14px, 14px, 400),
+        $subtitle-1: mat.define-typography-level(21px, 26px, 500),
+        $headline-6: mat.define-typography-level(18px, 26px, 600),
+        $headline-5: mat.define-typography-level(24px, 30px, 700),
+        $button: mat.define-typography-level(14px, 14px, 400),
+        $body-1: mat.define-typography-level(14px, 20px, 400),
+        $body-2: mat.define-typography-level(16px, 22px, 400),*/
+      ),
+  )
+);
+
+.bg-primary {
+  background: mat.get-color-from-palette($theme-primary, 500) !important;
+}
+
+
+
+
+  .mat-form-field-underline, .mat-form-field-underline.mat-focused {
+    background-color: orange;;
+  }
+
+
+
+  .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+    background-color: red;
+  }
+  
+  .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+    background-color: red;
+  }
+
+  .mat-slide-toggle .mat-slide-toggle-bar {
+    background-color: var(--pale-green);
+  }
+
+
+
+  .mat-mdc-slide-toggle {
+  /* default/primary color */
+  --mdc-switch-selected-focus-state-layer-color: #ba68c8;
+  --mdc-switch-selected-handle-color: #ba68c8;
+  --mdc-switch-selected-hover-state-layer-color: #ba68c8;
+  --mdc-switch-selected-pressed-state-layer-color: #ba68c8;
+  --mdc-switch-selected-focus-handle-color: #ce93d8;
+  --mdc-switch-selected-hover-handle-color: #ce93d8;
+  --mdc-switch-selected-pressed-handle-color: #ce93d8;
+  --mdc-switch-selected-focus-track-color: #8e24aa;
+  --mdc-switch-selected-hover-track-color: #8e24aa;
+  --mdc-switch-selected-pressed-track-color: #8e24aa;
+  --mdc-switch-selected-track-color: #8e24aa;
+  --mdc-switch-disabled-selected-handle-color: #000;
+  --mdc-switch-disabled-selected-icon-color: #212121;
+  --mdc-switch-disabled-selected-track-color: #f5f5f5;
+  --mdc-switch-disabled-unselected-handle-color: #000;
+  --mdc-switch-disabled-unselected-icon-color: #212121;
+  --mdc-switch-disabled-unselected-track-color: #f5f5f5;
+  --mdc-switch-handle-surface-color: var(--mdc-theme-surface, #fff);
+  --mdc-switch-handle-elevation-shadow: 0px 2px 1px -1px rgba(0, 0, 0, .2), 0px 1px 1px 0px rgba(0, 0, 0, .14), 0px 1px 3px 0px rgba(0, 0, 0, .12);
+  --mdc-switch-handle-shadow-color: black;
+  --mdc-switch-disabled-handle-elevation-shadow: 0px 0px 0px 0px rgba(0, 0, 0, .2), 0px 0px 0px 0px rgba(0, 0, 0, .14), 0px 0px 0px 0px rgba(0, 0, 0, .12);
+  --mdc-switch-selected-icon-color: #212121;
+  --mdc-switch-unselected-focus-handle-color: #fafafa;
+  --mdc-switch-unselected-focus-state-layer-color: #f5f5f5;
+  --mdc-switch-unselected-focus-track-color: #616161;
+  --mdc-switch-unselected-handle-color: #fff;
+  --mdc-switch-unselected-hover-handle-color: #fafafa;
+  --mdc-switch-unselected-hover-state-layer-color: #f5f5f5;
+  --mdc-switch-unselected-hover-track-color: #616161;
+  --mdc-switch-unselected-icon-color: #212121;
+  --mdc-switch-unselected-pressed-handle-color: #fafafa;
+  --mdc-switch-unselected-pressed-state-layer-color: #f5f5f5;
+  --mdc-switch-unselected-pressed-track-color: #616161;
+  --mdc-switch-unselected-track-color: #616161;
+
+  /* size */
+  --mdc-switch-state-layer-size: 60px;
+
+  /* typography */
+  --mat-slide-toggle-label-text-font: Roboto, sans-serif;
+  --mat-slide-toggle-label-text-size: 14px;
+  --mat-slide-toggle-label-text-tracking: .0178571429em;
+  --mat-slide-toggle-label-text-line-height: 30px;
+  --mat-slide-toggle-label-text-weight: 400
+}
+
+.mat-mdc-slide-toggle.mat-accent {
+  /* accent color */
+  --mdc-switch-selected-focus-state-layer-color: #81c784;
+  --mdc-switch-selected-handle-color: #616161;
+  --mdc-switch-selected-hover-state-layer-color: #616161;
+  --mdc-switch-selected-pressed-state-layer-color: #81c784;
+  --mdc-switch-selected-focus-handle-color: #616161;
+  --mdc-switch-selected-hover-handle-color: #616161;
+  --mdc-switch-selected-pressed-handle-color: #616161;
+  --mdc-switch-selected-focus-track-color: #616161;
+  --mdc-switch-selected-hover-track-color: #616161;
+  --mdc-switch-selected-pressed-track-color: #616161;
+  --mdc-switch-selected-track-color: #616161;
+  --mdc-switch-selected-icon-color: #fff;
+}
+
+.mat-mdc-slide-toggle.mat-warn {
+  /* warn color */  
+  --mdc-switch-selected-focus-state-layer-color: #e57373;
+  --mdc-switch-selected-handle-color: #e57373;
+  --mdc-switch-selected-hover-state-layer-color: #e57373;
+  --mdc-switch-selected-pressed-state-layer-color: #e57373;
+  --mdc-switch-selected-focus-handle-color: #ef9a9a;
+  --mdc-switch-selected-hover-handle-color: #ef9a9a;
+  --mdc-switch-selected-pressed-handle-color: #ef9a9a;
+  --mdc-switch-selected-focus-track-color: #e53935;
+  --mdc-switch-selected-hover-track-color: #e53935;
+  --mdc-switch-selected-pressed-track-color: #e53935;
+  --mdc-switch-selected-track-color: #e53935
+}
+

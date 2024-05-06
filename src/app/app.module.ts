@@ -17,6 +17,7 @@ import { ConfigService } from './shared/services/config.service';
 import {TranslateLoader, TranslateModule,TranslateService} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { SvgIconComponent, provideAngularSvgIcon } from 'angular-svg-icon';
+import { SharedModule } from './shared/shared.module';
 
 export const routes: Routes = [];
 
@@ -41,6 +42,7 @@ export function createTranslateLoader(http: HttpClient) {
     HttpClientModule,
     SvgIconComponent, 
     MaterialModule,
+    SharedModule,
     TranslateModule.forRoot({    
       loader: {       
           provide: TranslateLoader,

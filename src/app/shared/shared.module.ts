@@ -8,6 +8,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SwitcherComponent } from './components/switcher/switcher.component';
+import { TogglemodeComponent } from './components/togglemode/togglemode.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {TranslateLoader, TranslateModule, TranslateParser} from '@ngx-translate/core';
 import { TranslateApp } from './services/translate.service';
@@ -25,7 +26,8 @@ import { MaterialModule } from './modules/material/material.module';
     ContactComponent,
     FooterComponent,
     NavbarComponent,
-    SwitcherComponent
+    SwitcherComponent,
+    TogglemodeComponent
 
   ],
   imports: [
@@ -63,7 +65,8 @@ import { MaterialModule } from './modules/material/material.module';
     ContactComponent,
     FooterComponent,
     NavbarComponent,
-    SwitcherComponent
+    SwitcherComponent,
+    TogglemodeComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

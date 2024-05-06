@@ -1,11 +1,29 @@
 @use '@angular/material' as mat;
+@use '@angular/material-experimental' as matx;
 @include mat.core();
+//@include mat.slide-toggle-density(-15);
 
 @import "variables";
-@import "themes/gray";
-@include mat.all-component-themes($bluetheme);
+@import "themes/green";
 
+@include mat.all-component-themes($greentheme);
 
+$theme: matx.define-theme((
+  color: (
+    theme-type: dark,
+    primary: matx.$m3-green-palette,
+  ),
+  typography: (
+    brand-family: 'Comic Sans',
+    bold-weight: 900
+  ),
+  density: (
+    scale: -1
+  )
+));
 
+.tertiary-checkbox {
+    @include mat.checkbox-color($theme, $color-variant: tertiary);
+  }
 
 

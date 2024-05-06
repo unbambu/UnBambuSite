@@ -1,14 +1,11 @@
-<mat-drawer-container  autosize>
-    <mat-drawer #drawer  position="end" mode="over"
-
-
-    >
+<mat-drawer-container autosize>
+    <mat-drawer #drawer  position="end" mode="over" class="drawer" >
     
     <button
     (click)="drawerToggle()"
     class="absolute top-5 left-5 flex h-5 w-5 items-center 
     justify-center rounded   transition-all duration-500 
-    hover:text-muted-foreground text-teal-900    
+    hover:text-muted-foreground text-teal-900 dark:text-white   
     origin-center 
     active:origin-top
     focus:outline-1
@@ -20,42 +17,47 @@
     > </svg-icon>
   </button>
 
-
-
-
-  
-        <div class="navigation py-3 transition-all duration-700 font-mesloLGS-Regular" id="menu-collapse"   >
+        <div class="py-3 transition-all duration-700 font-mesloLGS-Regular"   >
         
-            <ul class="navbar-nav " [class.nav-light]="currentRoute" id="navbar-navlist">
+            <ul  [class.nav-light]="currentRoute" >
                 <li class="nav-item" [ngClass]="{'active': active == '#home'}">
-                    <a class="nav-link" (click)="ScrollIntoView('#home');   " href="javascript:void(0);"><span class="  dark:text-slate-100 "  [innerHTML]="'NavBar.Home' | translate"></span> </a>
+                    <a class="nav-link" (click)="ScrollIntoView('#home');   " href="javascript:void(0);"><span  [innerHTML]="'NavBar.Home' | translate"></span> </a>
                 </li>
+                <mat-divider ></mat-divider>
                 <li class="nav-item" [ngClass]="{'active': active == '#about'}">
-                    <a class="nav-link" href="javascript:void(0);" (click)="ScrollIntoView('#about')"><span class="dark:text-slate-100" [innerHTML]="'NavBar.About' | translate"></span> </a>
+                    <a class="nav-link" href="javascript:void(0);" (click)="ScrollIntoView('#about')"><span  [innerHTML]="'NavBar.About' | translate"></span> </a>
                 </li>
+                <mat-divider></mat-divider>
                 <li class="nav-item" [ngClass]="{'active': active == '#why'}">
-                    <a class="nav-link" href="javascript:void(0);" (click)="ScrollIntoView('#why')"><span class="dark:text-slate-100" [innerHTML]="'NavBar.Why' | translate"></span></a>
+                    <a class="nav-link" href="javascript:void(0);" (click)="ScrollIntoView('#why')"><span  [innerHTML]="'NavBar.Why' | translate"></span></a>
                 </li>
+                <mat-divider></mat-divider>
                 <li class="nav-item" [ngClass]="{'active': active == '#services'}">
-                    <a class="nav-link" href="javascript:void(0);" (click)="ScrollIntoView('#services')"><span class="dark:text-slate-100" [innerHTML]="'NavBar.Services' | translate"></span></a>
-                </li>                          
+                    <a class="nav-link" href="javascript:void(0);" (click)="ScrollIntoView('#services')"><span  [innerHTML]="'NavBar.Services' | translate"></span></a>
+                </li>   
+                <mat-divider></mat-divider>                       
                 <li class="nav-item" [ngClass]="{'active': active == '#contact'}" >
-                    <a class="nav-link" href="javascript:void(0);" (click)="ScrollIntoView('#contact')"><span class="dark:text-slate-100" [innerHTML]="'NavBar.Contact' | translate"></span></a>
+                    <a class="nav-link" href="javascript:void(0);" (click)="ScrollIntoView('#contact')"><span  [innerHTML]="'NavBar.Contact' | translate"></span></a>
                 </li>
-                
+                <mat-divider></mat-divider>
 
             </ul>
           
         </div>
+        <br>
+        
         <mat-form-field class="language my-0  ">
             
-            <mat-select [(ngModel)]="selectedValue" class="text-[8px] lg:text-[12px] md:text-xs">
+            <mat-select [(value)]="selectedValue" class="text-[14px] lg:text-[16px] ">
             <mat-option *ngFor="let lang of langs" [value]="lang.name" (click)="switchLang(lang.code)"
-            class="text-[8px] lg:text-[12px]" >
+            class="text-[14px] lg:text-[16px]" >
                 {{lang.name}}
             </mat-option>
             </mat-select>
         </mat-form-field>
+
+        
+        <app-togglemode></app-togglemode>
 
         
     </mat-drawer>
@@ -65,10 +67,10 @@
 
         
 
-<nav class="navbar bg-teal-900 scrollbar-thumb-rounded 
+<nav class="navbar scrollbar-thumb-rounded 
 scrollbar-track-rounded" id="navbar">
     <div class="container flex flex-wrap items-center justify-start">
-        <a class="navbar-brand" routerLink="/Home">
+        <a class="navbar-brand" routerLink="/">
             <span class="inline-block">
                 
                 <a href="/">

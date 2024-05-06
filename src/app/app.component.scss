@@ -5,62 +5,37 @@ mat-drawer-container {
   
   }
   
-  mat-drawer-content {
-   
-   /* display: flex;
-    height: 100%;
-    width: 100%;
-    align-items: center;*/
-    
 
-/*********************************/
-/*             Menu              */
-/*===============================*/
 
 .navbar {
-  @apply fixed top-0 start-0 end-0 z-999  py-3 transition-all duration-700 font-mesloLGS-Regular;
-  .navigation {
-      @apply w-full m-0;
-      .navbar-nav {
-          @apply mt-4 h-24;
-          .nav-item {
-            @apply relative mx-0 left-1 font-mesloLGS-Regular;
-          }
-          .nav-link {
-              @apply block p-3 text-slate-900 hover:text-orange-200 transition-all duration-500 dark:text-white/60
-               dark:hover:text-white;
-          }
-          .active {
-              .nav-link {
-                  @apply  text-orange-200 dark:text-orange-100;
-              }
-          }
-      }
-  }
-  .navbar-brand {
-      @apply me-12 p-0;
-      .l-dark,
-      .logo-dark-mode {
-          @apply hidden;
-      }
-      .l-light,
-      .logo-light-mode {
-          @apply inline-block;
-      }
-     
-  }
-  
-
+  @apply fixed top-0 start-0 end-0 z-999  py-3 transition-all duration-700 font-mesloLGS-Regular 
+   bg-teal-900  dark:bg-dark-navbar;
+ 
 }
 
-    
-   
-    
+    .nav-link {
+        @apply block p-1 text-slate-900 hover:text-orange-200 transition-all duration-500
+        dark:text-white/60
+        dark:hover:text-white;
+    }
+    .active {
+        .nav-link {
+            @apply  text-orange-200 dark:text-orange-100;
+        }
+    }
+  .nav-item {
+    @apply    font-mesloLGS-Regular text-[16px]  p-3;
+  }
+  
+  mat-divider
+  {
+    @apply  dark:border-brown-200
+
   }
   
   mat-drawer {
-    padding: 70px;
-    background-color: #cfc4b1;
+   padding: 40px;   
+   @apply  bg-white dark:bg-black;
    
   }
 

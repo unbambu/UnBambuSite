@@ -6,17 +6,14 @@ html {
 }
 
 body {
-    @apply font-rubik text-[15px] text-slate-900;
+    @apply font-opensans-regular text-[15px] text-slate-900;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    @apply font-rubik;
+    @apply font-opensans-regular;
 }
 
 p {
     @apply leading-relaxed;
 }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    @apply font-rubik;
-}

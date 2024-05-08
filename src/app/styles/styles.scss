@@ -1,4 +1,4 @@
-@import "angularmaterial/styles";
+
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
@@ -6,7 +6,7 @@
 @import "tailwind";
 @import "custom/fonts";
 @import "custom/variables";
-
+@import "angularmaterial/styles";
 /*
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }*/
@@ -14,3 +14,11 @@ html, body {
     height: 100%;
  
   }
+
+  *,
+::before,
+::after {
+  
+  border-style: none;
+
+}

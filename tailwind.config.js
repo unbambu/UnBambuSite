@@ -105,8 +105,7 @@ module.exports = {
     extend: {},
     scrollbar: ['dark', 'rounded'],
   },
-  plugins: [
-    require('@tailwindcss/forms'),
+  plugins: [    
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
     require('tailwind-scrollbar'),

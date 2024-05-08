@@ -13,8 +13,9 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {TranslateLoader, TranslateModule, TranslateParser} from '@ngx-translate/core';
 import { TranslateApp } from './services/translate.service';
 import { TranslateAppParser } from './services/translateparser.service';
-import {FormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule,  NG_VALUE_ACCESSOR } from '@angular/forms';
 import { MaterialModule } from './modules/material/material.module';
+
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { MaterialModule } from './modules/material/material.module';
   imports: [
     CommonModule,    
     FormsModule,
+    ReactiveFormsModule,    
     MaterialModule,
     TranslateModule.forChild({
       
@@ -54,7 +56,12 @@ import { MaterialModule } from './modules/material/material.module';
   providers: [   
     TranslateApp,
     TranslateAppParser,
-    TranslateModule
+    TranslateModule,
+   /* {
+      provide: NG_VALUE_ACCESSOR,      
+      useExisting: forwardRef(() => MatFormFieldControl),
+      multi: true,
+    },*/
 
   ],
   exports: [    

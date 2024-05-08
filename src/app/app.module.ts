@@ -4,6 +4,8 @@ import { APP_INITIALIZER, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule, ReactiveFormsModule,NgControl } from '@angular/forms';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/modules/material/material.module';
 
@@ -40,6 +42,8 @@ export function createTranslateLoader(http: HttpClient) {
     AppRoutingModule,
     BrowserAnimationsModule,    
     HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
     SvgIconComponent, 
     MaterialModule,
     SharedModule,

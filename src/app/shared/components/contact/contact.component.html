@@ -17,19 +17,21 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 mt-8 items-center gap-6">
             <div class="lg:col-span-8">
                 <div class="p-6 rounded-md shadow bg-white dark:bg-slate-900 ">
-                    <form [formGroup]="contactForm">
+                    <form [formGroup]="contactForm"
+                    (ngSubmit)="onSubmit()"
+                    >
                         <div class="grid grid-cols-1 ">
                            
                                                               
                                     <mat-form-field appearance="outline"  
                                     >
-                                      <mat-label>{{ 'Contact.Placeholder.Name'  | translate }}</mat-label>
-                                      <input [formControl]="name"  
-                                      matInput placeholder="{{ 'Contact.Placeholder.Name'  | translate }}">
+                                    <mat-label>{{ 'Contact.Placeholder.Name'  | translate }}</mat-label>
+                                    <input [formControl]="Name"  
+                                    matInput placeholder="{{ 'Contact.Placeholder.Name'  | translate }}">
+                                    <mat-error *ngIf="(Name.hasError('required') && ((Name.invalid && Name.touched) || Name.dirty))">                                      
+                                        <span [innerHTML]="'Contact.Validations.NameRequired' | translate"></span>
+                                    </mat-error>
                                      
-                                      @if (name.hasError('required')) {
-                                        <mat-error>Name is <strong>required</strong></mat-error>
-                                      }
                                     </mat-form-field>
                               
                             
@@ -37,37 +39,37 @@
                         </div>
 
                         <div class="grid grid-cols-1">
-                           
-                            <div class="mb-5" style="display: none;">
-                                <input name="email" id="email" type="email" class="form-input" placeholder= "{{ 'Contact.Placeholder.Email'  | translate }}">
-                            </div>
+                          
 
                             <mat-form-field appearance="outline"   >
                                 <mat-label>{{ 'Contact.Placeholder.Email'  | translate }}</mat-label>
                                 <input matInput 
-                                [formControl]="email"
+                                [formControl]="Email"
                                 placeholder="{{ 'Contact.Placeholder.Email'  | translate }}">
 
-                                @if (email.hasError('required')) {
-                                    <mat-error>Email is <strong>required</strong></mat-error>
-                                  }
-                            
+                                @if (Email.hasError('required') && ((Email.invalid && Email.touched) || Email.dirty)) {
+                                    <mat-error>                                        
+                                        <span [innerHTML]="'Contact.Validations.EmailRequired' | translate"></span>
+                                    </mat-error>
+                                    
+                                }
+                                @if (Email.hasError('pattern') && ((Email.invalid && Email.touched) || Email.dirty)) {
+                                    <mat-error>                                        
+                                        <span [innerHTML]="'Contact.Validations.EmailFormat' | translate"></span>
+                                    </mat-error>
+                                }
                             </mat-form-field>
                         </div>
 
                         <div class="grid grid-cols-1">
                            
-                            <div class="mb-5" style="display: none;">
-                                <input name="linkedIn" id="linkedIn" type="text" class="form-input" placeholder= "{{ 'Contact.Placeholder.LinkedIn'  | translate }}">
-                            </div>
+                           
                             <mat-form-field appearance="outline"   name="linkedIn" id="linkedIn">
                                 <mat-label>{{ 'Contact.Placeholder.LinkedIn'  | translate }}</mat-label>
-                                <input matInput placeholder="{{ 'Contact.Placeholder.LinkedIn'  | translate }}">                            
+                                <input matInput 
+                                [formControl]="LinkedIn"
+                                placeholder="{{ 'Contact.Placeholder.LinkedIn'  | translate }}">                            
                             </mat-form-field>
-
-                            <div class="mb-5" style="display: none;">
-                                <input name="phone" id="phone" type="email" class="form-input" placeholder= "{{ 'Contact.Placeholder.Phone'  | translate }}">
-                            </div>
 
                             <mat-form-field appearance="outline"   name="phone" id="phone">
                                 <mat-label>{{ 'Contact.Placeholder.Phone'  | translate }}</mat-label>
@@ -76,29 +78,49 @@
                         </div>
 
                         <div class="grid grid-cols-1">
-                            <div class="mb-5" style="display: none;">
-                                <input name="subject" id="subject" class="form-input" placeholder= "{{ 'Contact.Placeholder.Subject'  | translate }}">
-                            </div>
-                            <mat-form-field appearance="outline"  name="subject" id="subject">
+                           
+                            <mat-form-field appearance="outline"  >
                                 <mat-label>{{ 'Contact.Placeholder.Subject'  | translate }}</mat-label>
-                                <input matInput placeholder="{{ 'Contact.Placeholder.Subject'  | translate }}">                            
+                                <input matInput 
+                                [formControl]="Subject"
+                                placeholder="{{ 'Contact.Placeholder.Subject'  | translate }}">    
+                                
+                                @if (Subject.hasError('required') && ((Subject.invalid && Subject.touched) || Subject.dirty)) {
+                                    <mat-error>                                        
+                                        <span [innerHTML]="'Contact.Validations.SubjectRequired' | translate"></span>
+                                    </mat-error>
+                                    
+                                }
                             </mat-form-field>
 
-                            <div class="mb-5" style="display: none;">
-                                <textarea name="comments" id="comments" class="form-input textarea h-28"
-                                placeholder= "{{ 'Contact.Placeholder.Message'  | translate }}"></textarea>
-                            </div>
-
-                            <mat-form-field appearance="outline"   name="comments" id="comments">
+                          
+                            <mat-form-field appearance="outline"  >
                                 <mat-label>{{ 'Contact.Placeholder.Message'  | translate }}</mat-label>                                 
-                                <textarea matInput  rows="5" placeholder="{{ 'Contact.Placeholder.Message'  | translate }}"></textarea>                         
+                                <textarea matInput  
+                                [formControl]="Message"
+                                rows="5" placeholder="{{ 'Contact.Placeholder.Message'  | translate }}"></textarea>                         
+
+                                @if (Message.hasError('required') && ((Message.invalid && Message.touched) || Message.dirty)) {
+                                    <mat-error>                                        
+                                        <span [innerHTML]="'Contact.Validations.MessageRequired' | translate"></span>
+                                    </mat-error>
+                                    
+                                }
                             </mat-form-field>
-                        </div>
+                        </div>                      
                        
-                        <button type="submit" id="submit" name="send"
-                        class="btn bg-orange-100 hover:bg-orange-200 border-orange-100 hover:border-orange-200 hover:text-white text-teal-900 rounded-md h-11 justify-center flex items-center"
-                            [innerHTML]="'Contact.title' | translate">                        
-                        </button>
+
+                        <button 
+                        [ngClass]="contactForm.valid ? 'btn bg-orange-100 hover:bg-orange-200 border-orange-100 hover:border-orange-200 hover:text-white text-teal-900 rounded-md h-11 justify-center flex items-center'   
+                        : 
+                        'btn bg-gray-400 border-gray-400 text-white rounded-md h-11 justify-center flex items-center'"
+                        [innerHTML]="'Contact.title' | translate"                            
+                        type="submit" 
+                        [disabled]="!contactForm.valid"
+                        >                        
+                    </button>
+
+                        
                     </form>
                 </div>
             </div>

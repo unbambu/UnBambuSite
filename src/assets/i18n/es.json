@@ -81,6 +81,14 @@
       "Phone": "Teléfono",
       "Message": "Mensaje"
 
+    },
+    "Validations":
+    {
+      "NameRequired":   "El Nombre es <strong>requerido</strong>",
+      "EmailRequired": "El Email es <strong>requerido</strong>",
+      "EmailFormat": "El formato de Email es <strong>inválido</strong>",
+      "SubjectRequired": "El tema es <strong>requerido</strong>",
+      "MessageRequired": "El mensaje es <strong>requerido</strong>"
     }
   },
 

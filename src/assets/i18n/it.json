@@ -75,11 +75,19 @@
     {
       "Name": "Nome",
       "Email": "Email",
-      "Subject": "Oggetto",
+      "Subject": "Argomento",
       "LinkedIn": "LinkedIn",
       "Phone": "Telefono",
       "Message": "Messaggio"
 
+    },
+    "Validations":
+    {
+      "NameRequired":   "Il nome è <strong>obbligatorio</strong>",
+      "EmailRequired": "L'e-mail è <strong>obbligatorio</strong>",
+      "EmailFormat": "Il formato dell'e-mail <strong>non è valido</strong>",
+      "SubjectRequired": "L'argomento è <strong>obbligatorio</strong>",
+      "MessageRequired": "Il messaggio è <strong>obbligatorio</strong>"
     }
   },  
   

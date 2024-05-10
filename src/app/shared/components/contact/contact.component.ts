@@ -32,21 +32,50 @@ import { NgClass } from '@angular/common';
 })
 export class ContactComponent implements OnInit {
   
- name = new FormControl({value: "", disabled: false}, [
+ Name = new FormControl({value: "", disabled: false}, [
     Validators.required
   ]);
 
-  email = new FormControl('', [
+  Email = new FormControl('', [
+    Validators.required,    
+    Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")
+  ]);
+
+  Subject = new FormControl({value: "", disabled: false}, [
     Validators.required
+  ]);
+
+  Message = new FormControl({value: "", disabled: false}, [
+    Validators.required
+  ]);
+
+  LinkedIn = new FormControl({value: "", disabled: false}, [
+    
+  ]);
+
+  Phone = new FormControl({value: "", disabled: false}, [
+    
   ]);
   
  contactForm: FormGroup = new FormGroup({
-    name: this.name, 
-    email: this.email
+    Name: this.Name, 
+    Email: this.Email,
+    LinkedIn: this.LinkedIn,
+    Phone: this.Phone,
+    Subject: this.Subject,
+    Message: this.Message
  });
 
   ngOnInit() {
     
+  }
+
+  onSubmit(): void {
+    if (this.contactForm.invalid) {
+      return;
+    }
+    console.log("Valid")
+    // continue work here
   }
  
   //matcher = new MyErrorStateMatcher();

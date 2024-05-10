@@ -172,3 +172,58 @@ $greentheme: mat.define-light-theme(
   --mdc-switch-selected-track-color: #e53935
 }
 
+/* Change the border color */
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing 
+{
+    @apply  dark:border-white  dark:text-white;
+}
+
+/* Change the border focused color */
+.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__leading,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__notch,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__trailing 
+{
+    @apply  dark:border-white  dark:text-white ;
+}
+
+
+/* Change the border hover color */
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__leading,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__notch,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__trailing {
+  @apply  dark:border-white dark:text-white ;
+}
+
+
+/* Change the border width */
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline .mdc-notched-outline__leading,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline .mdc-notched-outline__notch,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline .mdc-notched-outline__trailing {
+  border-width: 1.5px !important;
+}
+
+
+
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-floating-label, 
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-floating-label--float-above {
+  @apply dark:text-white ;
+}
+
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-floating-label,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-floating-label--float-above
+{
+  @apply   dark:text-white ;
+}
+
+.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-floating-label,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-floating-label--float-above
+{
+    @apply   dark:text-white ;
+}
+
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input {
+  @apply   dark:text-white ;
+}
+

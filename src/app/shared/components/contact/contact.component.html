@@ -26,9 +26,9 @@
                                     <mat-form-field appearance="outline"  
                                     >
                                     <mat-label>{{ 'Contact.Placeholder.Name'  | translate }}</mat-label>
-                                    <input [formControl]="Name"  
+                                    <input [formControl]="Name"  [errorStateMatcher]="matcher"
                                     matInput placeholder="{{ 'Contact.Placeholder.Name'  | translate }}">
-                                    <mat-error *ngIf="(Name.hasError('required') && ((Name.invalid && Name.touched) || Name.dirty))">                                      
+                                    <mat-error *ngIf="(Name.hasError('required') )">                                      
                                         <span [innerHTML]="'Contact.Validations.NameRequired' | translate"></span>
                                     </mat-error>
                                      
@@ -47,13 +47,13 @@
                                 [formControl]="Email"
                                 placeholder="{{ 'Contact.Placeholder.Email'  | translate }}">
 
-                                @if (Email.hasError('required') && ((Email.invalid && Email.touched) || Email.dirty)) {
+                                @if (Email.hasError('required') ) {
                                     <mat-error>                                        
                                         <span [innerHTML]="'Contact.Validations.EmailRequired' | translate"></span>
                                     </mat-error>
                                     
                                 }
-                                @if (Email.hasError('pattern') && ((Email.invalid && Email.touched) || Email.dirty)) {
+                                @if (Email.hasError('pattern') ) {
                                     <mat-error>                                        
                                         <span [innerHTML]="'Contact.Validations.EmailFormat' | translate"></span>
                                     </mat-error>
@@ -64,16 +64,18 @@
                         <div class="grid grid-cols-1">
                            
                            
-                            <mat-form-field appearance="outline"   name="linkedIn" id="linkedIn">
+                            <mat-form-field appearance="outline"  >
                                 <mat-label>{{ 'Contact.Placeholder.LinkedIn'  | translate }}</mat-label>
                                 <input matInput 
                                 [formControl]="LinkedIn"
                                 placeholder="{{ 'Contact.Placeholder.LinkedIn'  | translate }}">                            
                             </mat-form-field>
 
-                            <mat-form-field appearance="outline"   name="phone" id="phone">
+                            <mat-form-field appearance="outline"   >
                                 <mat-label>{{ 'Contact.Placeholder.Phone'  | translate }}</mat-label>
-                                <input matInput placeholder="{{ 'Contact.Placeholder.Phone'  | translate }}">                            
+                                <input matInput 
+                                [formControl]="Phone"
+                                placeholder="{{ 'Contact.Placeholder.Phone'  | translate }}">                            
                             </mat-form-field>
                         </div>
 
@@ -85,7 +87,7 @@
                                 [formControl]="Subject"
                                 placeholder="{{ 'Contact.Placeholder.Subject'  | translate }}">    
                                 
-                                @if (Subject.hasError('required') && ((Subject.invalid && Subject.touched) || Subject.dirty)) {
+                                @if (Subject.hasError('required') ) {
                                     <mat-error>                                        
                                         <span [innerHTML]="'Contact.Validations.SubjectRequired' | translate"></span>
                                     </mat-error>
@@ -100,7 +102,7 @@
                                 [formControl]="Message"
                                 rows="5" placeholder="{{ 'Contact.Placeholder.Message'  | translate }}"></textarea>                         
 
-                                @if (Message.hasError('required') && ((Message.invalid && Message.touched) || Message.dirty)) {
+                                @if (Message.hasError('required') ) {
                                     <mat-error>                                        
                                         <span [innerHTML]="'Contact.Validations.MessageRequired' | translate"></span>
                                     </mat-error>

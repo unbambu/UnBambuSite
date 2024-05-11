@@ -1,11 +1,18 @@
 $mat-primary: (
-  100: #026e00,
+ /* 100: #026e00,
   500: #026e00,
-  700: #026e00,
+  700: #026e00,*/
+
+  100: #134e4a,
+  500: #134e4a,
+  700: #134e4a,
   contrast: (
-    100: #026e00,
+   /* 100: #026e00,
     500: #026e00,
-    700: #026e00,
+    700: #026e00,*/
+    100: #134e4a,
+    500: #134e4a,
+    700: #134e4a,
   ),
 );
 $mat-secondary: (
@@ -177,7 +184,7 @@ $greentheme: mat.define-light-theme(
 .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
 .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing 
 {
-    @apply  dark:border-white  dark:text-white;
+    @apply border-teal-700 dark:border-white  dark:text-white;
 }
 
 /* Change the border focused color */
@@ -185,7 +192,7 @@ $greentheme: mat.define-light-theme(
 .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__notch,
 .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__trailing 
 {
-    @apply  dark:border-white  dark:text-white ;
+    @apply border-teal-700 dark:border-white  dark:text-white ;
 }
 
 
@@ -193,7 +200,7 @@ $greentheme: mat.define-light-theme(
 .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__leading,
 .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__notch,
 .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__trailing {
-  @apply  dark:border-white dark:text-white ;
+  @apply border-teal-700 dark:border-white dark:text-white ;
 }
 
 
@@ -201,7 +208,7 @@ $greentheme: mat.define-light-theme(
 .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline .mdc-notched-outline__leading,
 .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline .mdc-notched-outline__notch,
 .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline .mdc-notched-outline__trailing {
-  border-width: 1.5px !important;
+  border-width: 0.5px !important;
 }
 
 

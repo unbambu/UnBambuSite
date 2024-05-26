@@ -6,28 +6,27 @@
    @apply   dark:bg-slate-700 dark:text-white
 }
 
-
 ::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
     
-    @apply  text-teal-700 dark:text-white
+    @apply  text-teal-700 dark:text-white;
   }
-  
+
 ::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input::placeholder {
    
-    @apply  text-teal-700 dark:text-white
+    @apply  text-teal-700 dark:text-white;
   
   }
   
 ::ng-deep .mdc-text-field .mdc-text-field__input {
     
-   @apply  dark:caret-white
+   @apply  dark:caret-white;
   }
 
 ::ng-deep .mdc-text-field--outlined.mdc-text-field:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
 ::ng-deep .mdc-text-field--outlined.mdc-text-field:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
 ::ng-deep .mdc-text-field--outlined.mdc-text-field:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing 
 {
- //  @apply border-teal-900 dark:border-white  dark:text-white ;
+
  @apply  dark:border-white  dark:text-white ;
 }
 
@@ -35,6 +34,150 @@
 ::ng-deep .mdc-text-field--outlined.mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__notch,
 ::ng-deep .mdc-text-field--outlined.mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__trailing 
 {
- //  @apply border-teal-900 dark:border-white  dark:text-white ;
-// @apply  dark:border-white  dark:text-white ;
+ 
 }
+
+/*Full Selected Box*/
+::ng-deep .mat-primary.mdc-menu-surface
+{  
+  @apply dark:bg-slate-800   ;
+}
+
+::ng-deep .mat-accent.mdc-menu-surface
+{  
+  @apply dark:bg-slate-800   ;
+}
+
+
+/*Selected Box Items Colors*/
+::ng-deep .mat-primary .mdc-list-item__primary-text
+{  
+ @apply dark:text-white  ;
+ //color: var(--mdc-theme-text-primary-on-background, #a32220);
+}
+::ng-deep .mat-accent .mdc-list-item__primary-text
+{  
+ @apply dark:text-white  ;
+}
+
+/*Selected Box Items Active*/
+::ng-deep .mat-primary .mat-mdc-option.mat-mdc-option-active
+{  
+ @apply dark:text-white;
+}
+::ng-deep .mat-accent .mat-mdc-option.mat-mdc-option-active
+{  
+ @apply dark:text-white;
+}
+::ng-deep .mat-warm .mat-mdc-option.mat-mdc-option-active
+{  
+ @apply dark:text-white;
+}
+
+/*Selected Box Items Selected*/
+::ng-deep .mat-primary .mat-mdc-option.mdc-list-item--selected:not(.mat-mdc-option-multiple):not(.mdc-list-item--disabled)
+{  
+ @apply dark:text-orange-100 ;
+}
+::ng-deep .mat-accent .mat-mdc-option.mdc-list-item--selected:not(.mat-mdc-option-multiple):not(.mdc-list-item--disabled)
+{  
+ @apply dark:text-orange-100 ;
+}
+
+/*Selected Box Items Selected Text*/
+::ng-deep .mat-primary .mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled) .mdc-list-item__primary-text
+{  
+ @apply dark:text-orange-100 ;
+}
+::ng-deep .mat-accent .mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled) .mdc-list-item__primary-text
+{ 
+ 
+ @apply dark:text-orange-100 ;
+}
+
+/*Selected Box Item Colors*/
+::ng-deep .mat-primary .mdc-list-item__primary-text
+{ 
+ 
+ @apply dark:text-white  ;
+}
+::ng-deep .mat-accent .mdc-list-item__primary-text
+{ 
+ 
+ @apply dark:text-white  ;
+}
+
+/*Selected Box Item Hover and Focus*/
+::ng-deep .mat-primary .mdc-option:hover:not(.mdc-list-item--disabled)
+::ng-deep .mat-primary .mdc-option:focus:not(.mdc-list-item--disabled)
+{ 
+ 
+ @apply dark:text-white  ;
+}
+
+::ng-deep .mat-accent .mdc-option:hover:not(.mdc-list-item--disabled)
+::ng-deep .mat-accent .mdc-option:focus:not(.mdc-list-item--disabled)
+{ 
+ 
+ @apply dark:text-white  ;
+}
+
+/*Selected Box Item Selected Text*/
+::ng-deep .mat-primary .mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled) .mdc-list-item__primary-text
+{  
+ @apply dark:text-orange-100 ;
+}
+::ng-deep .mat-accent .mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled) .mdc-list-item__primary-text
+{  
+ @apply dark:text-orange-100 ;
+}
+
+
+
+/*Selected Box Arrow Before Focus*/
+::ng-deep .mat-primary .mat-mdc-select-arrow
+{  
+ @apply dark:text-orange-100 ;
+}
+::ng-deep .mat-accent .mat-mdc-select-arrow
+{  
+ @apply dark:text-orange-100 ;
+}
+::ng-deep .mat-warm .mat-mdc-select-arrow
+{  
+ @apply dark:text-orange-100 ;
+}
+
+
+/*Selected Box Arrow After Focus*/
+::ng-deep .mat-mdc-form-field.mat-focused.mat-primary .mat-mdc-select-arrow
+{  
+ @apply dark:text-orange-100 ;
+}
+::ng-deep .mat-mdc-form-field.mat-focused.mat-accent .mat-mdc-select-arrow
+{  
+ @apply dark:text-orange-100 ;
+}
+::ng-deep .mat-mdc-form-field.mat-focused.mat-warm .mat-mdc-select-arrow
+{  
+ @apply dark:text-orange-100 ;
+}
+
+/*Selected Check Option*/
+::ng-deep .mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-checked::after, 
+::ng-deep .mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-indeterminate::after {
+  @apply dark:text-orange-100 ;
+} 
+
+/*Selected Value Text*/
+::ng-deep .mat-mdc-select-value-text {
+  @apply dark:text-white ;
+}
+
+/*
+::ng-deep .mat-mdc-text-field-wrapper.mdc-text-field.mdc-text-field--filled
+{ 
+  @apply  bg-transparent dark:border-white  dark:text-white ;
+ }
+
+*/

@@ -20,7 +20,7 @@
             <div class="list-none menu-social mb-0">
                
 
-                <mat-form-field class="language my-0  ">
+                <mat-form-field appearance="outline" class="language my-0  ">
             
                     <mat-select [(ngModel)]="selectedValue" class="text-[8px] lg:text-[12px] md:text-xs">
                     <mat-option *ngFor="let lang of langs" [value]="lang.name" (click)="switchLang(lang.code)"

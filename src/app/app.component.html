@@ -17,8 +17,7 @@
     > </svg-icon>
   </button>
 
-        <div class="py-3 transition-all duration-700 font-mesloLGS-Regular"   >
-        
+        <div class="py-3 transition-all duration-700 font-mesloLGS-Regular">        
             <ul  [class.nav-light]="currentRoute" >
                 <li class="nav-item" [ngClass]="{'active': active == '#home'}">
                     <a class="nav-link" (click)="ScrollIntoView('#home');   " href="javascript:void(0);"><span  [innerHTML]="'NavBar.Home' | translate"></span> </a>
@@ -40,14 +39,11 @@
                     <a class="nav-link" href="javascript:void(0);" (click)="ScrollIntoView('#contact')"><span  [innerHTML]="'NavBar.Contact' | translate"></span></a>
                 </li>
                 <mat-divider></mat-divider>
-
-            </ul>
-          
+            </ul>          
         </div>
         <br>
         
-        <mat-form-field class="language my-0  ">
-            
+        <mat-form-field  appearance="outline"  class="language my-0" >            
             <mat-select [(value)]="selectedValue" class="text-[14px] lg:text-[16px] ">
             <mat-option *ngFor="let lang of langs" [value]="lang.name" (click)="switchLang(lang.code)"
             class="text-[14px] lg:text-[16px]" >
@@ -55,71 +51,58 @@
             </mat-option>
             </mat-select>
         </mat-form-field>
-
-        
         <app-togglemode></app-togglemode>
 
         
     </mat-drawer>
-    <mat-drawer-content  id="main-content"
-    class="scrollbar-thumb-rounded scrollbar-track-rounded grow overflow-auto scrollbar-thin scrollbar-track-transparent scrollbar-thumb-muted">
+    <mat-drawer-content  id="main-content" class="overflow-auto scrollbar-thin scrollbar-track-transparent scrollbar-thumb-muted">
        
-
-        
-
-<nav class="navbar scrollbar-thumb-rounded 
-scrollbar-track-rounded" id="navbar">
-    <div class="container flex flex-wrap items-center justify-start">
-        <a class="navbar-brand" routerLink="/">
-            <span class="inline-block">
-                
-                <a href="/">
-                    <img src="assets/images/unbambu-teal-final.svg" class="l-light h-14 2xl:h-16 lg:h-16 md:h-16" alt="">
+        <nav class="navbar scrollbar-thumb-rounded scrollbar-track-rounded"  id="navbar">
+            <div class="container flex flex-wrap items-center justify-start">
+                <a class="navbar-brand" routerLink="/">
+                    <span class="inline-block">
+                        
+                        <a href="/">
+                            <img src="assets/images/unbambu-teal-final.svg" class="l-light h-14 2xl:h-16 lg:h-16 md:h-16" alt="">
+                        </a>
+                        <a href="/">
+                            <img src="assets/images/unbambu-light-final.svg" class="l-dark h-14 2xl:h-16 lg:h-12 md:h-11" alt="">
+                        </a>
+                    
+                    </span>
+                    
                 </a>
 
-              
-            </span>
-            
-        </a>
+                <div class="nav-icons flex items-center lg_992:order-2 ms-auto">
 
-        <div class="nav-icons flex items-center lg_992:order-2 ms-auto">
-
-            <div class="list-none menu-social mb-0">
+                    <div class="list-none menu-social mb-0">
+                    </div> 
+                
+                    <button
+                    (click)="drawerToggle()"
+                    class="absolute top-5 right-6 flex h-5 w-5 items-center 
+                    justify-center rounded text-muted-foreground/50 transition-all duration-500 
+                    hover:text-muted-foreground text-white
+                    origin-center 
+                    active:origin-top
+                    focus:outline-1
+                    hover:scale-125"
+                    >
+                    <svg-icon src="assets/icons/heroicons/outline/bars-3-bottom-left.svg" 
+                    [stretch]="true"
+                    [svgStyle]="{'width.px':40,'heigh.px':40,'padding.px':1,'margin.px':3}"
+                    > </svg-icon>
+                </button>
                 
 
-                             
-               
-            </div> 
-         
-            <button
-            (click)="drawerToggle()"
-            class="absolute top-5 right-6 flex h-5 w-5 items-center 
-            justify-center rounded text-muted-foreground/50 transition-all duration-500 
-            hover:text-muted-foreground text-white
-            origin-center 
-            active:origin-top
-            focus:outline-1
-            hover:scale-125"
-            >
-            <svg-icon src="assets/icons/heroicons/outline/bars-3-bottom-left.svg" 
-            [stretch]="true"
-            [svgStyle]="{'width.px':40,'heigh.px':40,'padding.px':1,'margin.px':3}"
-            > </svg-icon>
-          </button>
-         
+                </div   >
 
-        </div   >
-
-         
-        
-    </div>
-</nav>
+                
+                
+            </div>
+        </nav>
       
-     
-      
-     
-
-      <router-outlet></router-outlet>
+        <router-outlet></router-outlet>
    
     </mat-drawer-content>
   </mat-drawer-container>

@@ -1,42 +1,42 @@
 mat-drawer-container {
-    width: auto;
-    height: 100%;
-    
-  
-  }
-  
-
-
-.navbar {
-  @apply fixed top-0 start-0 end-0 z-999  py-3 transition-all duration-700 font-mesloLGS-Regular 
-   bg-teal-900  dark:bg-dark-navbar;
- 
-}
-
-    .nav-link {
-        @apply block p-1 text-slate-900 hover:text-orange-200 transition-all duration-500
-        dark:text-white/60
-        dark:hover:text-white;
-    }
-    .active {
-        .nav-link {
-            @apply  text-orange-200 dark:text-orange-100;
-        }
-    }
-  .nav-item {
-    @apply    font-mesloLGS-Regular text-[16px]  p-3;
-  }
-  
-  mat-divider
-  {
-    @apply  dark:border-brown-200
-
-  }
-  
-  mat-drawer {
-   padding: 40px;   
-   @apply  bg-white dark:bg-black;
+    /*width: auto;
+    height: 100%;*/
+    @apply  h-full w-auto
    
   }
 
+.navbar {
+  @apply fixed top-0 start-0 end-0 z-999  py-3 transition-all duration-700 font-mesloLGS-Regular 
+  bg-teal-900 dark:bg-dark-navbar ;
+ 
+}
 
+.nav-link {
+        @apply block p-1 text-slate-900 hover:text-orange-200 transition-all duration-500
+        dark:text-white/60
+        dark:hover:text-white;
+}
+.active {
+        .nav-link {
+            @apply  text-orange-200 dark:text-orange-100;
+        }
+}
+.nav-item {
+    @apply    font-mesloLGS-Regular text-[16px]  p-3;
+}
+  
+mat-divider
+{
+    @apply  dark:border-brown-200
+}
+  
+mat-drawer {
+   /*padding: 40px;   */
+   @apply  bg-white dark:bg-black p-14;
+   
+}
+
+
+.mat-drawer.mat-drawer-end {
+  @apply overflow-hidden ;
+}

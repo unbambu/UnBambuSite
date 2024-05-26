@@ -4,6 +4,7 @@
             <h6 class="text-teal-800  dark:text-slate-100 text-base font-bold uppercase mb-2"
 
                 [innerHTML]="'Contact.title' | translate">
+               
 
             </h6>
             <h3 class="mb-4 md:text-2xl text-xl font-medium dark:text-white"></h3>
@@ -12,6 +13,8 @@
                 
                 [innerHTML]="'Contact.desc' | translate">
             </p>
+
+           
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 mt-8 items-center gap-6">
@@ -79,22 +82,30 @@
                             </mat-form-field>
                         </div>
 
-                        <div class="grid grid-cols-1">
-                           
-                            <mat-form-field appearance="outline"  >
-                                <mat-label>{{ 'Contact.Placeholder.Subject'  | translate }}</mat-label>
-                                <input matInput 
-                                [formControl]="Subject"
-                                placeholder="{{ 'Contact.Placeholder.Subject'  | translate }}">    
+                        <div class="grid grid-cols-1">                           
+                            
                                 
-                                @if (Subject.hasError('required') ) {
-                                    <mat-error>                                        
-                                        <span [innerHTML]="'Contact.Validations.SubjectRequired' | translate"></span>
-                                    </mat-error>
-                                    
-                                }
-                            </mat-form-field>
+                                <mat-form-field  appearance="outline" >     
+                                    <mat-label>{{ 'Contact.Placeholder.Subject'  | translate }}</mat-label>       
+                                    <mat-select   [formControl]="Subject" 
+                                    #newItem
+                                    [errorStateMatcher]="matcher"
+                                    class="text-[14px] lg:text-[16px]">
+                                        <mat-option *ngFor="let item of ('Services.services' | translate)"  
+                                        [value]="item.title"                                      
+                                        class="text-[14px] lg:text-[16px]">                                    
+                                        {{item.title}}
+                                        </mat-option>
+                                        <mat-option  [value]= "'Services.others'  | translate"
+                                        class="text-[14px] lg:text-[16px]">                                                                            
+                                        {{ 'Services.others'  | translate }}
+                                        </mat-option>
 
+                                    </mat-select>         
+                                    <mat-error *ngIf="(Subject.hasError('required') )">                                      
+                                        <span [innerHTML]="'Contact.Validations.SubjectRequired' | translate"></span>
+                                    </mat-error>                           
+                                </mat-form-field>
                           
                             <mat-form-field appearance="outline"  >
                                 <mat-label>{{ 'Contact.Placeholder.Message'  | translate }}</mat-label>                                 

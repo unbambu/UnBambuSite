@@ -25,7 +25,7 @@ export class NavbarComponent implements OnInit {
    // if (router.url !== '/index-four' && router.url !== '/index-five' && router.url !== '/index-seven')
       this.currentRoute = true;
   }
-  windowScroll() {
+  /*windowScroll() {
     const navbar = document.getElementById("navbar");
     if (navbar != null) {
       if (
@@ -37,7 +37,7 @@ export class NavbarComponent implements OnInit {
         navbar.classList.remove("is-sticky");
       }
     }
-  }
+  }*/
 
   ScrollIntoView(elem: string) {
     this.active = elem;
@@ -50,7 +50,7 @@ export class NavbarComponent implements OnInit {
 
  
   ngOnInit() {
-    window.addEventListener('scroll', this.windowScroll, true);       
+    //window.addEventListener('scroll', this.windowScroll, true);       
     this.translate.SetLang("en","en");
     this.activeLang = 'en';
     this.selectedValue = 'English';

@@ -4,14 +4,22 @@ import { Component, OnInit, ViewChild, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateApp } from './shared/services/translate.service';
 import { MatDrawer } from '@angular/material/sidenav';
-
+import {
+  FormControl,
+  FormGroup,
+  FormGroupDirective,
+  NgForm,
+  Validators,
+  FormsModule,
+  ReactiveFormsModule,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-root',  
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent   {
   
   target: any;
   active: any = '#home';
@@ -35,13 +43,14 @@ export class AppComponent {
     this.currentRoute = true;
   }
 
-  ngOnInit() : void  {
+  ngOnInit() {
     
     this.translate.SetLang("en","en");
     this.activeLang = 'en';
     console.log('English')
     this.selectedValue = 'English';
     this.getLangs();
+    //window.addEventListener('scroll', this.windowScroll, true);
    
   }
  
@@ -52,6 +61,21 @@ export class AppComponent {
     ele.scrollIntoView({ behavior: 'smooth', block: 'start' });  
     this.drawer.toggle();
     
+  }
+
+  windowScroll() {
+    const navbar = document.getElementById("navbar");
+    if (navbar != null) {
+      console.log(document.body.scrollTop + " " + document.documentElement.scrollTop)
+      if (
+        document.body.scrollTop >= 50 ||
+        document.documentElement.scrollTop >= 50
+      ) {
+        navbar.classList.add("is-sticky");
+      } else {
+        navbar.classList.remove("is-sticky");
+      }
+    }
   }
 
  
@@ -65,6 +89,13 @@ export class AppComponent {
     this.langs = this.translate.getLangs();
     this.activeLang = lang;
     this.translate.SetLang(lang,lang);
+
+
+    /*this.Subject = new FormControl('', [Validators.required]);
+    this.Subject.updateValueAndValidity();*/
+
+
+  
   }
 
 

@@ -31,6 +31,7 @@
   {
     "title": "QUE FAISONS NOUS?",
     "subtitle": "Des solutions idéales pour votre organisation",
+    "others":"Autre",
     "services": [
     {
       "logo": "adjust-circle",
@@ -70,7 +71,7 @@
   "Contact": 
   {
     "title": "CONTACTEZ NOUS",
-    "desc": "On veut vous entendre !<br>Participez à la révolution numérique et environnementale.",
+    "desc": "On veut vous entendre !<br>Participez à la révolution numérique et environnementale.",    
     "Placeholder":
     {
       "Name": "Nom",

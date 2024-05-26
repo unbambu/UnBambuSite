@@ -4,3 +4,16 @@
 .l-light {
     @apply inline-block;
 }
+
+
+.is-sticky {
+    @apply bg-white dark:bg-slate-900 shadow dark:shadow-slate-800;
+    .navbar-brand {
+        .l-dark {
+            @apply inline-block;
+        }
+        .l-light {
+            @apply hidden;
+        }
+    }
+}

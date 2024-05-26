@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -31,7 +31,15 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent implements OnInit {
-  
+
+@Input() item = ''; // decorate the property with @Input()
+@Output() newItemEvent = new EventEmitter<string>();
+
+addNewItem(value: string) {
+  this.newItemEvent.emit(value);
+}
+
+ selectedSubject = '';
  Name = new FormControl({value: "", disabled: false}, [
     Validators.required
   ]);
@@ -41,9 +49,12 @@ export class ContactComponent implements OnInit {
     Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")
   ]);
 
-  Subject = new FormControl({value: "", disabled: false}, [
+ /* Subject = new FormControl({value: this.selectedSubject, disabled: false}, [
     Validators.required
-  ]);
+  ]);*/
+
+  Subject = new FormControl('', [Validators.required]);
+
 
   Message = new FormControl({value: "", disabled: false}, [
     Validators.required
@@ -67,7 +78,7 @@ export class ContactComponent implements OnInit {
  });
 
   ngOnInit() {
-    
+   
   }
 
   onSubmit(): void {

@@ -34,6 +34,7 @@ export class AppComponent   {
 
   @ViewChild(MatDrawer)
   drawer!: MatDrawer;
+  data = 0
   
   constructor(
     
@@ -52,6 +53,10 @@ export class AppComponent   {
     this.getLangs();
     //window.addEventListener('scroll', this.windowScroll, true);
    
+  }
+
+  changeFromParent(){
+    this.data += 1;
   }
  
 
@@ -89,13 +94,7 @@ export class AppComponent   {
     this.langs = this.translate.getLangs();
     this.activeLang = lang;
     this.translate.SetLang(lang,lang);
-
-
-    /*this.Subject = new FormControl('', [Validators.required]);
-    this.Subject.updateValueAndValidity();*/
-
-
-  
+    this.changeFromParent();
   }
 
 

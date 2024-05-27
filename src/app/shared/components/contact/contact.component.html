@@ -87,8 +87,7 @@
                                 
                                 <mat-form-field  appearance="outline" >     
                                     <mat-label>{{ 'Contact.Placeholder.Subject'  | translate }}</mat-label>       
-                                    <mat-select   [formControl]="Subject" 
-                                    #newItem
+                                    <mat-select   [formControl]="Subject"                                     
                                     [errorStateMatcher]="matcher"
                                     class="text-[14px] lg:text-[16px]">
                                         <mat-option *ngFor="let item of ('Services.services' | translate)"  

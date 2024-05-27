@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges  } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -30,66 +30,68 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent implements OnInit, OnChanges 
+{
 
-@Input() item = ''; // decorate the property with @Input()
-@Output() newItemEvent = new EventEmitter<string>();
+ 
+  @Input() parentData: any;
 
-addNewItem(value: string) {
-  this.newItemEvent.emit(value);
-}
-
- selectedSubject = '';
- Name = new FormControl({value: "", disabled: false}, [
-    Validators.required
+  selectedSubject = '';
+  Name = new FormControl({value: "", disabled: false}, [
+      Validators.required
   ]);
-
   Email = new FormControl('', [
     Validators.required,    
     Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")
   ]);
-
  /* Subject = new FormControl({value: this.selectedSubject, disabled: false}, [
     Validators.required
   ]);*/
-
   Subject = new FormControl('', [Validators.required]);
-
-
   Message = new FormControl({value: "", disabled: false}, [
     Validators.required
   ]);
-
-  LinkedIn = new FormControl({value: "", disabled: false}, [
-    
+  LinkedIn = new FormControl({value: "", disabled: false}, [    
   ]);
-
-  Phone = new FormControl({value: "", disabled: false}, [
-    
+  Phone = new FormControl({value: "", disabled: false}, [    
   ]);
-  
- contactForm: FormGroup = new FormGroup({
-    Name: this.Name, 
-    Email: this.Email,
-    LinkedIn: this.LinkedIn,
-    Phone: this.Phone,
-    Subject: this.Subject,
-    Message: this.Message
- });
+ contactForm: FormGroup = new FormGroup({});  
 
   ngOnInit() {
-   
+    this.setForm();
   }
 
-  onSubmit(): void {
+  
+  setForm() {
+    this.contactForm = new FormGroup({
+      Name: this.Name, 
+      Email: this.Email,
+      LinkedIn: this.LinkedIn,
+      Phone: this.Phone,
+      Subject: this.Subject,
+      Message: this.Message
+   });
+  }
+
+  setValidators() {   
+    this.setForm()
+    this.contactForm.updateValueAndValidity(); 
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    console.log(changes)
+    this.Subject = new FormControl('', [Validators.required]);
+    this.setValidators();
+  }
+
+  onSubmit(): void { 
     if (this.contactForm.invalid) {
+      console.log("InValid")
       return;
     }
     console.log("Valid")
     // continue work here
-  }
- 
+  } 
   matcher = new MyErrorStateMatcher();
-
 
 }

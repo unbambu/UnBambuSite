@@ -20,8 +20,12 @@ import {TranslateLoader, TranslateModule,TranslateService} from '@ngx-translate/
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { SvgIconComponent, provideAngularSvgIcon } from 'angular-svg-icon';
 import { SharedModule } from './shared/shared.module';
+import { environment } from '../environments/environment';
+import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module} from 'ng-recaptcha';
 
-export const routes: Routes = [];
+
+/*export const routes: Routes = [];*/
+
 
 export function initializeApp(config: ConfigService) {
   return () => config.loadAppConfig()
@@ -47,6 +51,8 @@ export function createTranslateLoader(http: HttpClient) {
     SvgIconComponent, 
     MaterialModule,
     SharedModule,
+    
+    
     TranslateModule.forRoot({    
       loader: {       
           provide: TranslateLoader,
@@ -54,13 +60,15 @@ export function createTranslateLoader(http: HttpClient) {
           deps: [HttpClient]
       }
      
-  })
-  
-    
+  }),
+ 
   ],
-  providers: [provideAngularSvgIcon()],
+  providers: [
+    provideAngularSvgIcon(),
+   
+  ],
 
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

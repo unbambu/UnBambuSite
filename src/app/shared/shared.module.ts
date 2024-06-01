@@ -15,7 +15,8 @@ import { TranslateApp } from './services/translate.service';
 import { TranslateAppParser } from './services/translateparser.service';
 import { FormsModule, ReactiveFormsModule,  NG_VALUE_ACCESSOR } from '@angular/forms';
 import { MaterialModule } from './modules/material/material.module';
-
+import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module} from 'ng-recaptcha';
+import { environment } from '../../environments/environment';
 
 
 @NgModule({
@@ -36,27 +37,31 @@ import { MaterialModule } from './modules/material/material.module';
     FormsModule,
     ReactiveFormsModule,    
     MaterialModule,
+    RecaptchaV3Module,
     TranslateModule.forChild({
       
-      loader: {       
+      /*loader: {       
           provide: TranslateLoader,
           useClass:TranslateApp
          
-      },
-      parser: { 
+      },*/
+     /* parser: { 
         provide: TranslateParser, 
         useClass:TranslateAppParser        
       
-      }
+      }*/
     })
     
   
     
   ],
   providers: [   
-    TranslateApp,
-    TranslateAppParser,
-    TranslateModule,
+    //TranslateApp,
+    //TranslateAppParser,
+    //TranslateModule,
+    { provide: RECAPTCHA_V3_SITE_KEY, 
+      useValue: environment.recaptcha.siteKey 
+    }
    /* {
       provide: NG_VALUE_ACCESSOR,      
       useExisting: forwardRef(() => MatFormFieldControl),
@@ -75,6 +80,6 @@ import { MaterialModule } from './modules/material/material.module';
     SwitcherComponent,
     TogglemodeComponent
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+ // schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class SharedModule { }

@@ -11,9 +11,9 @@ import {
 import {ErrorStateMatcher} from '@angular/material/core';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-
-
 import { NgClass } from '@angular/common';
+import { ReCaptchaV3Service } from 'ng-recaptcha';
+
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -35,6 +35,8 @@ export class ContactComponent implements OnInit, OnChanges
 
  
   @Input() parentData: any;
+  reCAPTCHAToken: string = "";
+  tokenVisible: boolean = false;
 
   selectedSubject = '';
   Name = new FormControl({value: "", disabled: false}, [
@@ -55,10 +57,14 @@ export class ContactComponent implements OnInit, OnChanges
   ]);
   Phone = new FormControl({value: "", disabled: false}, [    
   ]);
- contactForm: FormGroup = new FormGroup({});  
+  contactForm: FormGroup = new FormGroup({});  
+  constructor(private recaptchaV3Service: ReCaptchaV3Service) 
+  {
 
-  ngOnInit() {
-    this.setForm();
+  }
+    ngOnInit() {
+      this.setForm();
+      
   }
 
   
@@ -83,6 +89,15 @@ export class ContactComponent implements OnInit, OnChanges
     this.Subject = new FormControl('', [Validators.required]);
     this.setValidators();
   }
+
+  /*public send(): void {
+   
+
+    this.recaptchaV3Service.execute('importantAction')
+    .subscribe((token: string) => {
+      console.debug(`Token [${token}] generated`);
+    });
+  }*/
 
   onSubmit(): void { 
     if (this.contactForm.invalid) {

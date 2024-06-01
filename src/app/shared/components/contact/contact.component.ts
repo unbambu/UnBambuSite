@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges  } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input, Output, EventEmitter, OnChanges, SimpleChanges  } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -12,8 +12,8 @@ import {ErrorStateMatcher} from '@angular/material/core';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { NgClass } from '@angular/common';
-import { ReCaptchaV3Service } from 'ng-recaptcha';
-
+import { Subscription } from 'rxjs';  
+import { OnExecuteData, ReCaptchaV3Service } from "ng-recaptcha";
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -30,13 +30,16 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
-export class ContactComponent implements OnInit, OnChanges 
+export class ContactComponent implements OnInit, OnChanges, OnDestroy 
 {
 
  
   @Input() parentData: any;
   reCAPTCHAToken: string = "";
+  private sub: Subscription = new Subscription
+
   tokenVisible: boolean = false;
+  
 
   selectedSubject = '';
   Name = new FormControl({value: "", disabled: false}, [
@@ -64,6 +67,8 @@ export class ContactComponent implements OnInit, OnChanges
   }
     ngOnInit() {
       this.setForm();
+
+     
       
   }
 
@@ -90,16 +95,22 @@ export class ContactComponent implements OnInit, OnChanges
     this.setValidators();
   }
 
-  /*public send(): void {
-   
-
-    this.recaptchaV3Service.execute('importantAction')
-    .subscribe((token: string) => {
-      console.debug(`Token [${token}] generated`);
-    });
-  }*/
 
   onSubmit(): void { 
+
+   /* const element = document.getElementsByClassName('grecaptcha-badge')[0] as HTMLElement;
+    console.log('element ', element);
+    if (element) {
+      element.style.visibility = 'visible';
+    }*/
+
+    
+    
+    let sub = this.recaptchaV3Service.execute('importantAction')
+    .subscribe((token: string) => {
+      console.log(`Token [${token}] generated`);    
+      
+    });
     if (this.contactForm.invalid) {
       console.log("InValid")
       return;
@@ -109,4 +120,12 @@ export class ContactComponent implements OnInit, OnChanges
   } 
   matcher = new MyErrorStateMatcher();
 
+  public ngOnDestroy() {
+    if (this.sub) {
+      this.sub.unsubscribe();
+      console.log("unsubscribe")
+    }
+  }
+
 }
+

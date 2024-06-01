@@ -6,8 +6,8 @@
 export const environment = {
   production: false,
   recaptcha: {
-      siteKey: '6Lf7UL0cAAAAAIt_m-d24WG4mA1XFPHE8yVckc5S',
-  },
+      siteKey: '6Lc_J-spAAAAAEpz_y8rn_6NdlPdg_oqo-IbN1ih',
+  }, 
 };
 
 /*

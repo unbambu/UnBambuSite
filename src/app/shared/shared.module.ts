@@ -40,25 +40,25 @@ import { environment } from '../../environments/environment';
     RecaptchaV3Module,
     TranslateModule.forChild({
       
-      /*loader: {       
+      loader: {       
           provide: TranslateLoader,
           useClass:TranslateApp
          
-      },*/
-     /* parser: { 
+      },
+     parser: { 
         provide: TranslateParser, 
         useClass:TranslateAppParser        
       
-      }*/
+      }
     })
     
   
     
   ],
   providers: [   
-    //TranslateApp,
-    //TranslateAppParser,
-    //TranslateModule,
+    TranslateApp,
+    TranslateAppParser,
+    TranslateModule,
     { provide: RECAPTCHA_V3_SITE_KEY, 
       useValue: environment.recaptcha.siteKey 
     }

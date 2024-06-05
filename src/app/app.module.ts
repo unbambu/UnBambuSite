@@ -20,6 +20,7 @@ import {TranslateLoader, TranslateModule,TranslateService} from '@ngx-translate/
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { SvgIconComponent, provideAngularSvgIcon } from 'angular-svg-icon';
 import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
 import { environment } from '../environments/environment';
 import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module} from 'ng-recaptcha';
 
@@ -51,6 +52,7 @@ export function createTranslateLoader(http: HttpClient) {
     SvgIconComponent, 
     MaterialModule,
     SharedModule,
+    CoreModule,
     
     
     TranslateModule.forRoot({    

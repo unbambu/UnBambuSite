@@ -14,6 +14,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { NgClass } from '@angular/common';
 import { Subscription } from 'rxjs';  
 import { OnExecuteData, ReCaptchaV3Service } from "ng-recaptcha";
+import { Contact } from '@core/models/contact';
+import { ContactService } from '@core/services/contact.service';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -61,15 +63,13 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
   Phone = new FormControl({value: "", disabled: false}, [    
   ]);
   contactForm: FormGroup = new FormGroup({});  
-  constructor(private recaptchaV3Service: ReCaptchaV3Service) 
+  constructor(private recaptchaV3Service: ReCaptchaV3Service,
+    private contactService: ContactService) 
   {
 
   }
     ngOnInit() {
       this.setForm();
-
-     
-      
   }
 
   
@@ -106,9 +106,27 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
 
     
     
-    let sub = this.recaptchaV3Service.execute('importantAction')
+    let sub = this.recaptchaV3Service.execute('sendmessage')
     .subscribe((token: string) => {
-      console.log(`Token [${token}] generated`);    
+      console.log(`Token [${token}] generated`);  
+      
+      var contact = new Contact();
+        contact = {
+          ...contact,
+          ...this.contactForm.value,
+        };
+        contact.recaptcha = token;
+
+        this.contactService
+        .addmessage(contact)
+        .subscribe(
+          {
+            complete: () => {
+              console.log('Ok...');
+             
+            }
+          }
+        );
       
     });
     if (this.contactForm.invalid) {

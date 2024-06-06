@@ -106,7 +106,7 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
 
     
     
-    let sub = this.recaptchaV3Service.execute('sendmessage')
+    let sub = this.recaptchaV3Service.execute('UnBambuMessage')
     .subscribe((token: string) => {
       console.log(`Token [${token}] generated`);  
       
@@ -116,13 +116,13 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
           ...this.contactForm.value,
         };
         contact.recaptcha = token;
-
+      
         this.contactService
         .addmessage(contact)
         .subscribe(
           {
             complete: () => {
-              console.log('Ok...');
+              console.log('Send Ok...');
              
             }
           }

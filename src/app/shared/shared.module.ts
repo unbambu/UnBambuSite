@@ -17,7 +17,7 @@ import { FormsModule, ReactiveFormsModule,  NG_VALUE_ACCESSOR } from '@angular/f
 import { MaterialModule } from './modules/material/material.module';
 import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module} from 'ng-recaptcha';
 import { environment } from '../../environments/environment';
-
+import { SnackbarComponent } from './components/snackbar/snackbar.component'
 
 @NgModule({
   declarations: [  
@@ -29,7 +29,8 @@ import { environment } from '../../environments/environment';
     FooterComponent,
     NavbarComponent,
     SwitcherComponent,
-    TogglemodeComponent
+    TogglemodeComponent,
+    SnackbarComponent
 
   ],
   imports: [
@@ -78,7 +79,8 @@ import { environment } from '../../environments/environment';
     FooterComponent,
     NavbarComponent,
     SwitcherComponent,
-    TogglemodeComponent
+    TogglemodeComponent,
+    SnackbarComponent
   ],
  // schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

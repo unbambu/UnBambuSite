@@ -101,5 +101,11 @@
   {
     "rights": "© Unbambú - All rights reserved."
     
+  },
+  "Message": 
+  {
+    "Description": "Your message has been sent! <br> We will contact you shortly. <br> Thanks for trusting us .",
+    "Close": "Close"
+    
   }
 }

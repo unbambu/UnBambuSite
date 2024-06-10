@@ -97,5 +97,12 @@
   {
     "rights": "© Unbambú - Todos los derechos reservados."
     
+  },
+  "Message": 
+  {
+    "Description": "¡Tu mensaje ha sido enviado! <br> Te estaremos contactarnos a la brevedad. <br> Gracias por confiar en nosotros.",
+    "Close": "Cerrar"
+    
   }
+
 }

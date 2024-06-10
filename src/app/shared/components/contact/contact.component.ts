@@ -16,6 +16,17 @@ import { Subscription } from 'rxjs';
 import { OnExecuteData, ReCaptchaV3Service } from "ng-recaptcha";
 import { Contact } from '@core/models/contact';
 import { ContactService } from '@core/services/contact.service';
+import { endpoints, environment } from '@environments/index';
+import { SnackbarComponent } from '../snackbar/snackbar.component'
+
+import {
+  MatSnackBar,
+  MatSnackBarAction,
+  MatSnackBarActions,
+  MatSnackBarLabel,
+  MatSnackBarRef,
+} from '@angular/material/snack-bar';
+import {TranslateService} from "@ngx-translate/core";
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -27,14 +38,13 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 
 @Component({
   selector: 'app-contact',
- /* standalone: true,
-  imports: [NgClass],*/
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent implements OnInit, OnChanges, OnDestroy 
 {
 
+  
  
   @Input() parentData: any;
   reCAPTCHAToken: string = "";
@@ -63,8 +73,14 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
   Phone = new FormControl({value: "", disabled: false}, [    
   ]);
   contactForm: FormGroup = new FormGroup({});  
+  durationInSeconds = 5;
+  message = '';
+
   constructor(private recaptchaV3Service: ReCaptchaV3Service,
-    private contactService: ContactService) 
+    private contactService: ContactService,
+    private _snackBar: MatSnackBar,
+    private translate: TranslateService,
+    public snackBar: MatSnackBar) 
   {
 
   }
@@ -72,6 +88,13 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
       this.setForm();
   }
 
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action);
+
+    this._snackBar.open(message, action, {
+      duration: this.durationInSeconds * 1000,
+    });
+  }
   
   setForm() {
     this.contactForm = new FormGroup({
@@ -104,9 +127,26 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
       element.style.visibility = 'visible';
     }*/
 
+    this.translate.get('Message.Description').subscribe((res: string) => {
+        this.message = res;
+        console.log(res);
+      
+    });
+
+   //this.openSnackBar(this.message, 'UnBambú')
+
+    this.snackBar.openFromComponent(SnackbarComponent, {
+      duration: this.durationInSeconds * 1000,
+      data: {
+        html: this.message
+      }
+   });
+
+   
+
+    /*
     
-    
-    let sub = this.recaptchaV3Service.execute('UnBambuMessage')
+    let sub = this.recaptchaV3Service.execute(environment.recaptcha.action)
     .subscribe((token: string) => {
       console.log(`Token [${token}] generated`);  
       
@@ -123,6 +163,7 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
           {
             complete: () => {
               console.log('Send Ok...');
+              this.openSnackBar('Tu mensaje ha sido enviado. <br> Te estaremos contactarnos a la brevedad. <br> Gracias por confiar en nosotros.', 'UnBambú')
              
             }
           }
@@ -135,6 +176,7 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
     }
     console.log("Valid")
     // continue work here
+    */
   } 
   matcher = new MyErrorStateMatcher();
 

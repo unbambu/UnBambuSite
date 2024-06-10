@@ -9,7 +9,7 @@ import { HomeComponent } from './components/home.component';
 
 @NgModule({
   declarations: [
-    HomeComponent,
+    HomeComponent    
     
   ],
   imports: [
@@ -23,6 +23,7 @@ import { HomeComponent } from './components/home.component';
   ],
   exports: [
     HomeComponent
+    
     
   ],
   

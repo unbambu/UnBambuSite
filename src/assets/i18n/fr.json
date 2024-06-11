@@ -95,5 +95,11 @@
   {
     "rights": "© Unbambú - Tous droits réservés."
     
+  },
+  "Message": 
+  {
+    "Description": "Ton message a été envoyé! <br> Nous vous contacterons sous peu. <br> Merci de nous faire confiance.",
+    "Close": "Fermer"
+    
   }
 }

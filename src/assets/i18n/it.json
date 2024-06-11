@@ -96,5 +96,11 @@
   {
     "rights": "© Unbambú - Tutti i diritti riservati."
     
+  },
+  "Message": 
+  {
+    "Description": "Il tuo messaggio è stato inviato! <br> Ti contatteremo a breve. <br> Grazie per aver fiducia in noi.",
+    "Close": "Vicino"
+    
   }
 }

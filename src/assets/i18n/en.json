@@ -72,7 +72,7 @@
  ,
   "Contact": 
   {
-    "title": "CONTACT US",
+    "title": "Contact us",
     "desc": "We want to hear from you!<br>Join the digital and environmental revolution.",
     "Placeholder":
     {
@@ -104,8 +104,9 @@
   },
   "Message": 
   {
-    "Description": "Your message has been sent! <br> We will contact you shortly. <br> Thanks for trusting us .",
-    "Close": "Close"
+    "description": "Your message has been sent! <br> We will contact you shortly. <br> Thanks for trusting our commitment.",
+    "close": "Close",
+    "sending":"Sending..."
     
   }
 }

@@ -28,11 +28,11 @@ import {
 } from '@angular/material/snack-bar';
 import {TranslateService} from "@ngx-translate/core";
 
-/** Error when invalid control is dirty, touched, or submitted. */
+/** Error when invalid control is dirty, touched. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
-    const isSubmitted = form && form.submitted;
-    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+    const isSubmitted = form && form.submitted;    
+    return !!(control && control.invalid && (control.dirty || control.touched ));
   }
 }
 
@@ -49,10 +49,7 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
   @Input() parentData: any;
   reCAPTCHAToken: string = "";
   private sub: Subscription = new Subscription
-
   tokenVisible: boolean = false;
-  
-
   selectedSubject = '';
   Name = new FormControl({value: "", disabled: false}, [
       Validators.required
@@ -75,6 +72,8 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
   contactForm: FormGroup = new FormGroup({});  
   durationInSeconds = 5;
   message = '';
+  saving: boolean = false;
+ 
 
   constructor(private recaptchaV3Service: ReCaptchaV3Service,
     private contactService: ContactService,
@@ -88,13 +87,7 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
       this.setForm();
   }
 
-  openSnackBar(message: string, action: string) {
-    this._snackBar.open(message, action);
 
-    this._snackBar.open(message, action, {
-      duration: this.durationInSeconds * 1000,
-    });
-  }
   
   setForm() {
     this.contactForm = new FormGroup({
@@ -113,39 +106,52 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log(changes)
+    
     this.Subject = new FormControl('', [Validators.required]);
     this.setValidators();
   }
-
-
+ 
   onSubmit(): void { 
 
-   /* const element = document.getElementsByClassName('grecaptcha-badge')[0] as HTMLElement;
-    console.log('element ', element);
-    if (element) {
-      element.style.visibility = 'visible';
-    }*/
-
-    this.translate.get('Message.Description').subscribe((res: string) => {
-        this.message = res;
-        console.log(res);
-      
-    });
-
-   //this.openSnackBar(this.message, 'UnBambú')
-
-    this.snackBar.openFromComponent(SnackbarComponent, {
-      duration: this.durationInSeconds * 1000,
-      data: {
-        html: this.message
-      }
-   });
-
-   
-
-    /*
+    if (!this.contactForm.valid) {
+      console.log("InValid")
+      return;
+    }
+    console.log("Valid")
+    this.saving = true;
     
+    /*let ele = document.getElementById('svgspinner') as any;
+    ele.classList.toggle('show');  */
+
+    this.translate.get('Message.description').subscribe((res: string) => {
+        this.message = res;       
+    });
+    var contact = new Contact();
+    contact = {
+      ...contact,
+      ...this.contactForm.value,
+    };
+    contact.recaptcha = '';
+    this.contactService
+    .addmessage(contact)
+    .subscribe(
+      {
+        complete: () => {
+          console.log('Send Ok...');
+          this.contactForm.reset();
+          this.snackBar.openFromComponent(SnackbarComponent, {
+            duration: this.durationInSeconds * 1000,
+            data: {
+              html: this.message
+            }
+          });
+          this.saving = false;
+         
+        }
+      }
+    );
+    
+/*
     let sub = this.recaptchaV3Service.execute(environment.recaptcha.action)
     .subscribe((token: string) => {
       console.log(`Token [${token}] generated`);  
@@ -163,19 +169,21 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
           {
             complete: () => {
               console.log('Send Ok...');
-              this.openSnackBar('Tu mensaje ha sido enviado. <br> Te estaremos contactarnos a la brevedad. <br> Gracias por confiar en nosotros.', 'UnBambú')
+              this.contactForm.reset();
+              this.snackBar.openFromComponent(SnackbarComponent, {
+                duration: this.durationInSeconds * 1000,
+                data: {
+                  html: this.message
+                }
+              });
+              this.saving = false;
              
             }
           }
         );
       
     });
-    if (this.contactForm.invalid) {
-      console.log("InValid")
-      return;
-    }
-    console.log("Valid")
-    // continue work here
+  
     */
   } 
   matcher = new MyErrorStateMatcher();

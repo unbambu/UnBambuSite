@@ -70,7 +70,7 @@
   },
   "Contact": 
   {
-    "title": "CONTACTEZ NOUS",
+    "title": "Contactez nous",
     "desc": "On veut vous entendre !<br>Participez à la révolution numérique et environnementale.",    
     "Placeholder":
     {
@@ -98,8 +98,9 @@
   },
   "Message": 
   {
-    "Description": "Ton message a été envoyé! <br> Nous vous contacterons sous peu. <br> Merci de nous faire confiance.",
-    "Close": "Fermer"
+    "description": "Ton message a été envoyé! <br> Nous vous contacterons sous peu. <br> Merci de faire confiance à notre engagement.",
+    "close": "Fermer",
+    "sending":"Envoi..."
     
   }
 }

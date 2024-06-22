@@ -70,7 +70,7 @@
   },
   "Contact": 
   {
-    "title": "CONTATTACI",
+    "title": "Contattaci",
     "desc": "Vogliamo sapere di voi!<br>Entra a far parte della rivoluzione digitale e ambientale.",
     "Placeholder":
     {
@@ -99,8 +99,9 @@
   },
   "Message": 
   {
-    "Description": "Il tuo messaggio è stato inviato! <br> Ti contatteremo a breve. <br> Grazie per aver fiducia in noi.",
-    "Close": "Vicino"
+    "description": "Il tuo messaggio è stato inviato! <br> Ti contatteremo a breve. <br> Grazie per aver creduto nel nostro impegno.",
+    "close": "Vicino",
+    "sending":"Invio..."
     
   }
 }

@@ -29,13 +29,11 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-              
+            "styles": [              
               "src/app/styles/styles.scss",
-              "./node_modules/animate.css/animate.css",              
+              "./node_modules/animate.css/animate.css",
               "src/assets/libs/@mdi/font/css/materialdesignicons.min.css",
               "src/assets/libs/@iconscout/unicons/css/line.css"
-              
             ],
             "scripts": []
           },
@@ -95,6 +93,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/ngx-loading-buttons/src/styles.css",
               "@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.scss"
             ],

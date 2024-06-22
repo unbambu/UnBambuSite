@@ -51,7 +51,7 @@ module.exports = {
         'bluegreen': '#66b1b1',        
         'dark-footer': '#192132',
         "dark-700": "#090e34b3",
-        "brown": "#CFC4B0",
+        "brown": "#CFC4B1",        
         'brown': {
           100: '#CFC4B0',
           200: '#948870',
@@ -109,6 +109,7 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
     require('tailwind-scrollbar'),
+    require('tailwindcss-animated'),
     'prettier-plugin-tailwindcss',
   ]
  

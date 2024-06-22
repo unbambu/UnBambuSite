@@ -19,6 +19,8 @@ import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module} from 'ng-recaptcha';
 import { environment } from '../../environments/environment';
 import { SnackbarComponent } from './components/snackbar/snackbar.component'
 
+
+
 @NgModule({
   declarations: [  
     HomeComponent,  
@@ -38,7 +40,7 @@ import { SnackbarComponent } from './components/snackbar/snackbar.component'
     FormsModule,
     ReactiveFormsModule,    
     MaterialModule,
-    RecaptchaV3Module,
+    RecaptchaV3Module,    
     TranslateModule.forChild({
       
       loader: {       

@@ -1,11 +1,13 @@
   <div class="flex justify-between ">
-    <div [innerHTML]="data.html" class="mx-3 text-lg"></div>
+    <div [innerHTML]="data.html" class="mx-3 text-[16px]"></div>
     
     <div >
         
         <button 
             (click)="snackBar.dismiss()"
-            class="btn mx-3 bg-orange-100 hover:bg-orange-200 border-orange-100 hover:border-orange-200 hover:text-white text-teal-900 rounded-md h-10 justify-center flex items-center"
+            class="btn mx-3 bg-orange-100 hover:bg-orange-200 border-orange-100
+             hover:border-orange-200 hover:text-white text-teal-900 
+             rounded-md h-8 justify-center flex items-center"
             [innerHTML]="'Message.close' | translate" 
         >                        
         </button>

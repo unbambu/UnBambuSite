@@ -7,4 +7,34 @@ export class Contact {
     phone: string = '';
     description: string = '';
     recaptcha: string = '';
+    "Greetings":
+    {
+      A: string,
+      B: string,
+      C: string,
+    };
+    "Fields":
+    {
+        Name: string,
+        Email: string,
+        Subject: string,
+        Phone: string,
+        Message: string,
+
+    }
+}
+
+export class Greetings { 
+    A: string = '';
+    B: string = '';
+    C: string = '';
+}
+
+export class Fields { 
+    Name!: string;
+    Email!: string;
+    Subject!: string;
+    LinkedIn!: string;
+    Phone!: string;
+    Message!: string;
 }

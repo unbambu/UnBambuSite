@@ -88,6 +88,12 @@
       "EmailFormat": "Le format de l'e-mail <strong>n'est pas valide</strong>",
       "SubjectRequired": "Le affaire est <strong>obligatoire</strong>",
       "MessageRequired": "Le message est  <strong>obligatoire</strong>"
+    },
+    "Greetings":
+    {
+      "A":"Salut, ",
+      "B":"Merci d'avoir communiqué avec nous. <br> Vous nous avez envoyé les informations suivantes: <br><br>",
+      "C":"<br>Nous vous contacterons sous peu."
     }
   },  
 

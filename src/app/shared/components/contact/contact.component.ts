@@ -14,7 +14,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { NgClass } from '@angular/common';
 import { Subscription } from 'rxjs';  
 import { OnExecuteData, ReCaptchaV3Service } from "ng-recaptcha";
-import { Contact } from '@core/models/contact';
+import { Contact, Greetings } from '@core/models/contact';
 import { ContactService } from '@core/services/contact.service';
 import { endpoints, environment } from '@environments/index';
 import { SnackbarComponent } from '../snackbar/snackbar.component'
@@ -71,7 +71,24 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
   ]);
   contactForm: FormGroup = new FormGroup({});  
   durationInSeconds = 5;
-  message = '';
+  message = '';   
+  Greetings!: 
+  {    
+    A: string
+    B: string    
+    C: string
+  };
+  Fields!: 
+  {    
+    Name: string;
+    Email: string;
+    Subject: string;
+    LinkedIn: string;
+    Phone: string;
+    Message: string;
+  };
+
+
   saving: boolean = false;
  
 
@@ -126,12 +143,50 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
     this.translate.get('Message.description').subscribe((res: string) => {
         this.message = res;       
     });
+    
+
+    this.translate.get([
+      'Contact.Greetings.A',
+      'Contact.Greetings.B',
+      'Contact.Greetings.C',
+      'Contact.Placeholder.Name',
+      'Contact.Placeholder.Email',
+      'Contact.Placeholder.Subject',
+      'Contact.Placeholder.LinkedIn',
+      'Contact.Placeholder.Phone',
+      'Contact.Placeholder.Message'
+
+    ]).subscribe((res) => {      
+     
+      this.Greetings = 
+      {
+        A: res['Contact.Greetings.A'],
+        B: res['Contact.Greetings.B'],
+        C: res['Contact.Greetings.C'],
+      };
+      this.Fields = 
+      {
+        Name: res['Contact.Placeholder.Name'],
+        Email: res['Contact.Placeholder.Email'],
+        Subject: res['Contact.Placeholder.Subject'],
+        LinkedIn: res['Contact.Placeholder.LinkedIn'],
+        Phone: res['Contact.Placeholder.Phone'],
+        Message: res['Contact.Placeholder.Message'],
+      };
+
+    });
+  
+
     var contact = new Contact();
     contact = {
       ...contact,
       ...this.contactForm.value,
     };
     contact.recaptcha = '';
+    contact.Greetings = this.Greetings;
+    contact.Fields = this.Fields;
+       
+    //contact.Greetings =  this.greetings; 
     this.contactService
     .addmessage(contact)
     .subscribe(

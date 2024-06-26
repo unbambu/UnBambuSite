@@ -91,9 +91,12 @@
       "EmailFormat": "<strong> Invalid </strong> Email format",
       "SubjectRequired": "Subject <strong>required</strong>",
       "MessageRequired": "Message <strong>required</strong>"
-     
-     
-
+    },
+    "Greetings":
+    {
+      "A":"Hello, ",
+      "B":"Thank you for communicating with us. <br> You sent us the following information: <br><br>",
+      "C":"<br>We will contact you shortly."
     }
   },
  

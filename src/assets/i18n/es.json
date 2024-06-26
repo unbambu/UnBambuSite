@@ -90,9 +90,14 @@
       "EmailFormat": "El formato de Email es <strong>inválido</strong>",
       "SubjectRequired": "El tema es <strong>requerido</strong>",
       "MessageRequired": "El mensaje es <strong>requerido</strong>"
+    },
+    "Greetings":
+    {
+      "A":"Hola, ",
+      "B":"Gracias por comunicarte con nosotros. <br> Nos enviaste los siguientes datos: <br><br>",
+      "C":"<br>Te contactaremos a la brevedad."
     }
   },
-
   "Footer": 
   {
     "rights": "© Unbambú - Todos los derechos reservados."

@@ -89,6 +89,12 @@
       "EmailFormat": "Il formato dell'e-mail <strong>non è valido</strong>",
       "SubjectRequired": "L'argomento è <strong>obbligatorio</strong>",
       "MessageRequired": "Il messaggio è <strong>obbligatorio</strong>"
+    },
+    "Greetings":
+    {
+      "A":"Ciao, ",
+      "B":"Grazie per aver comunicato con noi. <br> Ci hai inviato le seguenti informazioni: <br><br>",
+      "C":"<br>Ti contatteremo a breve."
     }
   },  
   

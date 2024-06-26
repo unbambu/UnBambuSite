@@ -89,6 +89,12 @@
       "EmailFormat": "O formato do e-mail é <strong>inválido</strong>",
       "SubjectRequired": "o assunto é <strong>inválido</strong>",
       "MessageRequired": "A mensagem é <strong>obrigatória</strong>"
+    },
+    "Greetings":
+    {
+      "A": "Olá, ",
+      "B":"Obrigado por se comunicar conosco. <br> Você nos enviou as seguintes informações: <br><br>",
+      "C":"<br>Entraremos em contato em breve."
     }
   },
 

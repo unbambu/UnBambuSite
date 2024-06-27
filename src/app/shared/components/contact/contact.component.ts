@@ -136,10 +136,7 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
     }
     console.log("Valid")
     this.saving = true;
-    
-    /*let ele = document.getElementById('svgspinner') as any;
-    ele.classList.toggle('show');  */
-
+   
     this.translate.get('Message.description').subscribe((res: string) => {
         this.message = res;       
     });
@@ -177,17 +174,18 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
     });
   
 
-    var contact = new Contact();
-    contact = {
-      ...contact,
+    /*var contact = new Contact();
+    contact.Main = {
+      ...contact.Main,
       ...this.contactForm.value,
     };
-    contact.recaptcha = '';
+  
     contact.Greetings = this.Greetings;
     contact.Fields = this.Fields;
        
-    //contact.Greetings =  this.greetings; 
-    this.contactService
+   
+  contact.Main.recaptcha = '';
+   this.contactService
     .addmessage(contact)
     .subscribe(
       {
@@ -204,26 +202,103 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
          
         }
       }
-    );
+    );*/
+
+    let sub = this.recaptchaV3Service.execute(environment.recaptcha.action)
+    .subscribe({ 
+      next:(token: string) => {      
+      console.log(`Token [${token}] generated`);  
+
+      var contact = new Contact();
+      contact.Main = {
+        ...contact.Main,
+        ...this.contactForm.value,
+      };
+
+      contact.Greetings = this.Greetings;
+      contact.Fields = this.Fields;
+      contact.Main.recaptcha = token;
+
+      this.contactService
+      .addmessage(contact)
+      .subscribe({
+        next(x) {
+        
+        },
+        error:(err) => {
+         
+          this.snackBar.openFromComponent(SnackbarComponent, {
+            duration: this.durationInSeconds * 1000,
+            data: {
+              html: 'something wrong occurred'
+            }
+          });
+          this.saving = false;
+          
+        },
+        complete: () => {
+          console.log('Send Ok...');
+            this.contactForm.reset();
+            this.snackBar.openFromComponent(SnackbarComponent, {
+              duration: this.durationInSeconds * 1000,
+              data: {
+                html: this.message
+              }
+            });
+            this.saving = false;
+        },
+      });      
+    },
+    error:(err) => {      
+     
+      this.snackBar.openFromComponent(SnackbarComponent, {
+        duration: this.durationInSeconds * 1000,
+        data: {
+          html: 'Token Error ' 
+        }
+      });
+      this.saving = false;
+    },
+    complete:() => {
+     
+    },
+  });
     
 /*
     let sub = this.recaptchaV3Service.execute(environment.recaptcha.action)
     .subscribe((token: string) => {
       console.log(`Token [${token}] generated`);  
       
-      var contact = new Contact();
-        contact = {
-          ...contact,
+       var contact = new Contact();
+        contact.Main = {
+          ...contact.Main,
           ...this.contactForm.value,
         };
-        contact.recaptcha = token;
+  
+        contact.Greetings = this.Greetings;
+        contact.Fields = this.Fields;
+        contact.Main.recaptcha = token;
       
         this.contactService
         .addmessage(contact)
-        .subscribe(
-          {
-            complete: () => {
-              console.log('Send Ok...');
+        .subscribe({
+          next(x) {
+            console.log('got value ' + x);
+            
+          },
+          error:(err) => {
+            console.error('something wrong occurred: ' + err);
+            this.snackBar.openFromComponent(SnackbarComponent, {
+              duration: this.durationInSeconds * 1000,
+              data: {
+                html: 'something wrong occurred'
+              }
+            });
+            this.saving = false;
+            
+          },
+          complete: () => {
+            console.log('Send Ok...');
               this.contactForm.reset();
               this.snackBar.openFromComponent(SnackbarComponent, {
                 duration: this.durationInSeconds * 1000,
@@ -232,14 +307,14 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
                 }
               });
               this.saving = false;
-             
-            }
-          }
-        );
-      
-    });
+          },
+        });        
+    }
+    
   
-    */
+  );*/
+  
+   
   } 
   matcher = new MyErrorStateMatcher();
 

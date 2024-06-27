@@ -23,7 +23,8 @@ import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 import { environment } from '../environments/environment';
 import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module} from 'ng-recaptcha';
-
+import { ErrorHandler } from '@angular/core';
+import { ErrorService } from './shared/services/error.service';
 
 /*export const routes: Routes = [];*/
 
@@ -67,6 +68,10 @@ export function createTranslateLoader(http: HttpClient) {
   ],
   providers: [
     provideAngularSvgIcon(),
+    {
+      provide: ErrorHandler,
+      useClass: ErrorService
+    },
    
   ],
 

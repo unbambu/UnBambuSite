@@ -70,7 +70,7 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
   Phone = new FormControl({value: "", disabled: false}, [    
   ]);
   contactForm: FormGroup = new FormGroup({});  
-  durationInSeconds = 5;
+  durationInSeconds = 5 * 1000;
   message = '';   
   Greetings!: 
   {    
@@ -172,39 +172,48 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
       };
 
     });
-  
 
-    /*var contact = new Contact();
+    var contact = new Contact();
     contact.Main = {
       ...contact.Main,
       ...this.contactForm.value,
     };
-  
+
     contact.Greetings = this.Greetings;
     contact.Fields = this.Fields;
-       
-   
-  contact.Main.recaptcha = '';
-   this.contactService
+    contact.Main.recaptcha = "";
+
+    this.contactService
     .addmessage(contact)
-    .subscribe(
-      {
-        complete: () => {
-          console.log('Send Ok...');
+    .subscribe({
+   
+      error:(err) => {
+       
+        this.snackBar.openFromComponent(SnackbarComponent, {
+          duration: this.durationInSeconds,
+          data: {
+            html: 'something wrong occurred'
+          }
+        });
+        this.saving = false;
+        
+      },
+      complete: () => {
+        console.log('Send Ok...');
           this.contactForm.reset();
           this.snackBar.openFromComponent(SnackbarComponent, {
-            duration: this.durationInSeconds * 1000,
+            duration: this.durationInSeconds,
             data: {
               html: this.message
             }
           });
           this.saving = false;
-         
-        }
-      }
-    );*/
+      },
+    });      
 
-    let sub = this.recaptchaV3Service.execute(environment.recaptcha.action)
+  
+
+  /*  let sub = this.recaptchaV3Service.execute(environment.recaptcha.action)
     .subscribe({ 
       next:(token: string) => {      
       console.log(`Token [${token}] generated`);  
@@ -222,13 +231,11 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
       this.contactService
       .addmessage(contact)
       .subscribe({
-        next(x) {
-        
-        },
+     
         error:(err) => {
          
           this.snackBar.openFromComponent(SnackbarComponent, {
-            duration: this.durationInSeconds * 1000,
+            duration: this.durationInSeconds,
             data: {
               html: 'something wrong occurred'
             }
@@ -240,7 +247,7 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
           console.log('Send Ok...');
             this.contactForm.reset();
             this.snackBar.openFromComponent(SnackbarComponent, {
-              duration: this.durationInSeconds * 1000,
+              duration: this.durationInSeconds,
               data: {
                 html: this.message
               }
@@ -252,7 +259,7 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
     error:(err) => {      
      
       this.snackBar.openFromComponent(SnackbarComponent, {
-        duration: this.durationInSeconds * 1000,
+        duration: this.durationInSeconds,
         data: {
           html: 'Token Error ' 
         }
@@ -263,56 +270,8 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
      
     },
   });
-    
-/*
-    let sub = this.recaptchaV3Service.execute(environment.recaptcha.action)
-    .subscribe((token: string) => {
-      console.log(`Token [${token}] generated`);  
-      
-       var contact = new Contact();
-        contact.Main = {
-          ...contact.Main,
-          ...this.contactForm.value,
-        };
-  
-        contact.Greetings = this.Greetings;
-        contact.Fields = this.Fields;
-        contact.Main.recaptcha = token;
-      
-        this.contactService
-        .addmessage(contact)
-        .subscribe({
-          next(x) {
-            console.log('got value ' + x);
-            
-          },
-          error:(err) => {
-            console.error('something wrong occurred: ' + err);
-            this.snackBar.openFromComponent(SnackbarComponent, {
-              duration: this.durationInSeconds * 1000,
-              data: {
-                html: 'something wrong occurred'
-              }
-            });
-            this.saving = false;
-            
-          },
-          complete: () => {
-            console.log('Send Ok...');
-              this.contactForm.reset();
-              this.snackBar.openFromComponent(SnackbarComponent, {
-                duration: this.durationInSeconds * 1000,
-                data: {
-                  html: this.message
-                }
-              });
-              this.saving = false;
-          },
-        });        
-    }
-    
-  
-  );*/
+    */
+
   
    
   } 

@@ -62,7 +62,7 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
     Validators.required
   ]);*/
   Subject = new FormControl('', [Validators.required]);
-  Message = new FormControl({value: "", disabled: false}, [
+  Description = new FormControl({value: "", disabled: false}, [
     Validators.required
   ]);
   LinkedIn = new FormControl({value: "", disabled: false}, [    
@@ -113,7 +113,7 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
       LinkedIn: this.LinkedIn,
       Phone: this.Phone,
       Subject: this.Subject,
-      Message: this.Message
+      Description: this.Description
    });
   }
 

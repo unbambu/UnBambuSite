@@ -80,7 +80,7 @@
       "Subject": "Tema",
       "LinkedIn": "LinkedIn",
       "Phone": "Teléfono",
-      "Message": "Mensaje"
+      "Description": "Mensaje"
 
     },
     "Validations":
@@ -89,7 +89,7 @@
       "EmailRequired": "El Email es <strong>requerido</strong>",
       "EmailFormat": "El formato de Email es <strong>inválido</strong>",
       "SubjectRequired": "El tema es <strong>requerido</strong>",
-      "MessageRequired": "El mensaje es <strong>requerido</strong>"
+      "DescriptionRequired": "El mensaje es <strong>requerido</strong>"
     },
     "Greetings":
     {

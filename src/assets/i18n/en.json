@@ -81,7 +81,7 @@
       "Subject": "Subject",
       "LinkedIn": "LinkedIn",
       "Phone": "Phone",
-      "Message": "Message"
+      "Description": "Message"
 
     },
     "Validations":
@@ -90,7 +90,7 @@
       "EmailRequired": "Email is <strong>required</strong>",
       "EmailFormat": "<strong> Invalid </strong> Email format",
       "SubjectRequired": "Subject <strong>required</strong>",
-      "MessageRequired": "Message <strong>required</strong>"
+      "DescriptionRequired": "Message <strong>required</strong>"
     },
     "Greetings":
     {

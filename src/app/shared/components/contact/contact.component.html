@@ -107,15 +107,15 @@
                                 </mat-form-field>
                           
                             <mat-form-field appearance="outline"  >
-                                <mat-label>{{ 'Contact.Placeholder.Message'  | translate }}</mat-label>                                 
+                                <mat-label>{{ 'Contact.Placeholder.Description'  | translate }}</mat-label>                                 
                                 <textarea matInput  
-                                [formControl]="Message"
+                                [formControl]="Description"
                                 [errorStateMatcher]="matcher"
-                                rows="5" placeholder="{{ 'Contact.Placeholder.Message'  | translate }}"></textarea>                         
+                                rows="5" placeholder="{{ 'Contact.Placeholder.Description'  | translate }}"></textarea>                         
 
-                                @if (Message.hasError('required')  && (Subject.touched) ) {
+                                @if (Description.hasError('required')  && (Description.touched) ) {
                                     <mat-error>                                        
-                                        <span [innerHTML]="'Contact.Validations.MessageRequired' | translate"></span>
+                                        <span [innerHTML]="'Contact.Validations.DescriptionRequired' | translate"></span>
                                     </mat-error>
                                     
                                 }

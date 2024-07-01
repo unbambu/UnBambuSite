@@ -86,6 +86,7 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
     LinkedIn: string;
     Phone: string;
     Message: string;
+    
   };
 
 
@@ -151,7 +152,7 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
       'Contact.Placeholder.Subject',
       'Contact.Placeholder.LinkedIn',
       'Contact.Placeholder.Phone',
-      'Contact.Placeholder.Message'
+      'Contact.Placeholder.Description'
 
     ]).subscribe((res) => {      
      
@@ -168,11 +169,13 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
         Subject: res['Contact.Placeholder.Subject'],
         LinkedIn: res['Contact.Placeholder.LinkedIn'],
         Phone: res['Contact.Placeholder.Phone'],
-        Message: res['Contact.Placeholder.Message'],
+        Message: res['Contact.Placeholder.Description'],
+
       };
 
     });
 
+    
     var contact = new Contact();
     contact.Main = {
       ...contact.Main,
@@ -182,7 +185,9 @@ export class ContactComponent implements OnInit, OnChanges, OnDestroy
     contact.Greetings = this.Greetings;
     contact.Fields = this.Fields;
     contact.Main.recaptcha = "";
-
+    contact.Main.language = this.parentData;
+    
+    
     this.contactService
     .addmessage(contact)
     .subscribe({

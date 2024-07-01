@@ -35,7 +35,8 @@ export class AppComponent   {
 
   @ViewChild(MatDrawer)
   drawer!: MatDrawer;
-  data = 0
+  //data = 0
+  data!: string;
   
   constructor(
     
@@ -49,15 +50,17 @@ export class AppComponent   {
     
     this.translate.SetLang("en","en");
     this.activeLang = 'en';
-    console.log('English')
+    //console.log('English')
     this.selectedValue = 'English';
     this.getLangs();
-    //window.addEventListener('scroll', this.windowScroll, true);
-   
+    this.changeFromParent();
+  
   }
 
   changeFromParent(){
-    this.data += 1;
+   // this.data += 1;
+   this.data = this.selectedValue ;
+   
   }
  
 

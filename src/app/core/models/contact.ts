@@ -7,6 +7,7 @@ export class Contact {
         linkedin: string
         phone: string
         description: string
+        language: string
         recaptcha: string
     };
     "Greetings":
@@ -21,7 +22,7 @@ export class Contact {
         Email: string
         Subject: string
         Phone: string
-        Message: string
+        Message: string        
     }
 }
 
@@ -32,6 +33,7 @@ class Main {
     linkedin!: string;
     phone!: string;
     description!: string;
+    language!: string;
     recaptcha!: string;
 }
 
@@ -48,4 +50,5 @@ export class Fields {
     LinkedIn!: string;
     Phone!: string;
     Message!: string;
+    
 }
